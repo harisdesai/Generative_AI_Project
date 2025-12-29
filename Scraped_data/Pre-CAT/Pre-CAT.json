@@ -1,0 +1,51 @@
+{
+    "page_url": "https://sunbeaminfo.in/pre-cat",
+    "general_info": {
+        "course_title": "PREPARATORY COURSE FOR ENTRANCE EXAM"
+    },
+    "accordion_sections": [
+        {
+            "title": "Course Contents",
+            "type": "text",
+            "content": "General Aptitude (Quantitative Aptitude, Reasoning and English)\nComputer Fundamentals & Concepts of Programming\nC Programming\nData Structure\nObject Oriented Programming Concepts Using C++\nOperating Systems & Networking\nBasics of Big Data & Artificial Intelligence\nComputer Architecture\nDigital Electronics\nMicroprocessor\nCLICK TO REGISTER"
+        },
+        {
+            "title": "Eligibility Criteria",
+            "type": "text",
+            "content": "Eligibility Criteria for Pre-CAT Courses :\nStudents who are eligible for Full-time PG Courses are eligible for Pre-CAT courses.\n    CLICK TO REGISTER"
+        },
+        {
+            "title": "Pre-CAT Batches schedule",
+            "type": "table",
+            "content": [
+                {
+                    "Sr.No": "1",
+                    "Batch Code": "PM-48",
+                    "Batch Duration": "160 Hrs",
+                    "Start Date": "16-Feb-2026",
+                    "End Date": "14-Apr-2026",
+                    "Time": "9:00 AM  To  1:00 PM",
+                    "Fees (Rs.)": "17600/-"
+                },
+                {
+                    "Sr.No": "2",
+                    "Batch Code": "OM-66",
+                    "Batch Duration": "160 Hrs",
+                    "Start Date": "25-Feb-2026",
+                    "End Date": "16-May-2026",
+                    "Time": "2:00 PM  To  6:00 PM",
+                    "Fees (Rs.)": "15500/-"
+                },
+                {
+                    "Sr.No": "3",
+                    "Batch Code": "PH-39",
+                    "Batch Duration": "160 Hrs",
+                    "Start Date": "09-Mar-2026",
+                    "End Date": "05-May-2026",
+                    "Time": "9:00 AM  To  1:00 PM",
+                    "Fees (Rs.)": "17600/-"
+                }
+            ]
+        }
+    ]
+}

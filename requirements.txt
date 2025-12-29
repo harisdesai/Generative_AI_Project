@@ -1,0 +1,33 @@
+streamlit
+python-dotenv
+pandas
+numpy
+
+# LLM & LangChain
+langchain
+langchain-community
+langchain-core
+langchain-groq
+langchain-openai
+langchain-huggingface
+
+# Vector DB / RAG
+chromadb
+sentence-transformers
+
+# Database
+mysql-connector-python
+pymysql
+pandasql
+
+# Web & APIs
+requests
+
+# PDF / Document handling
+pypdf
+
+# Web Automation (used in assignments)
+selenium
+
+# Utilities
+tqdm
