@@ -1,0 +1,50 @@
+{
+    "course_name": "Machine Learning",
+    "url": "https://sunbeaminfo.in/modular-courses/machine-learning-classes",
+    "general_info": {
+        "summary": "Course Name : Machine Learning | Batch Schedule : 26-Oct-2023   To   28-Nov-2023 | Schedule : Weekdays - (Mon -Fri) | Duration : 40 hrs. | Timings : 07:30 AM  To  9:30 AM | Fees : Rs. 7500/- (Inc. 18% GST)"
+    },
+    "sections": [
+        {
+            "title": "Course Highlights",
+            "content": "Click to Register"
+        },
+        {
+            "title": "Target Audience:",
+            "content": "Students\n\tFresher's\n\tWorking Professionals\n                                                \n                                                Click to Register"
+        },
+        {
+            "title": "Syllabus:",
+            "content": "Introduction to Machine Learning\n\t\n\t\tBig picture of machine learning\n\t\tWhy machine learning is needed?\n\t\tTypes of machine learning\n\t\tChallenges of machine learning\n\t\tCreating machine learning pipeling\n\t\tEnd-to-end process\n\t\n\t\n\tRegression \n\t\n\t\tUnderstanding statistical regression\n\t\tPerforming regression with\n\t\t\n\t\t\tSimple linear regressison\n\t\t\tMultiple linear regression\n\t\t\tSupport vector machine\n\t\t\n\t\t\n\t\tEvaluating models using RMSE, MSE, MAE etc\n\t\n\t\n\t Classification\n\t\n\t\tUnderstanding need of classification\n\t\tClassification vs regression\n\t\tPerforming classification with\n\t\t\n\t\t\tLogistic regression\n\t\t\tSupport vector machine\n\t\t\tDecision trees\n\t\t\tK nearest neighbours\n\t\t\n\t\t\n\t\tEvaluating models using AuC and RoC etc\n\t\n\t\n\tEnsemble Learning\n\t\n\t\tWhat is ensemble learning\n\t\tNeed of ensemble learning\n\t\tTypes of ensemble learning\n\t\t\n\t\t\tBagging\n\t\t\t\n\t\t\t\tRandom forest\n\t\t\t\n\t\t\t\n\t\t\tBoosting\n\t\t\t\n\t\t\t\tGradient boosting\n\t\t\t\tXgboost\n\t\t\t\n\t\t\t\n\t\t\tStacking\n\t\t\n\t\t\n\t\n\t\n\tClustering\n\t\n\t\tWhy clustering is needed?\n\t\tPerforming clustering using\n\t\t\n\t\t\tHierarchical clustering\n\t\t\tK meaning clustering\n\t\t\n\t\t\n\t\n\t\n\tAssociation Rule Mining\n\t\n\t\tWhere association rule mining is needed\n\t\tPerforming association rule mining using\n\t\t\n\t\t\tApriori\n\t\t\n\t\t\n\t\n\t\n\tDimensionality Reduction\n\t\n\t\tIntroduction to feature extraction\n\t\tWhat is dimensionality reduction?\n\t\tPerforming dimensionality reduction using\n\t\t\n\t\t\tPCA\n\t\t\n\t\t\n\t\n\t\n\tIntrodution to Deep Learning\n\t\n\t\tWhat is deep learning?\n\t\tIntroduction to artificial networking\n\t\tIntroduction to TensorFlow and Keras\n\t\tIntroduction MLPs with Keras\n\t\n\t\n\tConvolutional Neural Network\n\t\n\t\tDeep computer vision using CNN\n\t\tIntroduction to images and convolutions\n\t\tCNN architecture\n\t\tImage classification using CNN\n\t\tObject detection using CNN\n\t\n\t\n\tRecurrent Neural Network\n\t\n\t\tIntroduction to RNN\n\t\tProcessing sequences using RNN\n\t\tTraining RNN\n\t\tForecasting time series using TensorFlow\n\t\tNaural language processing using RNN\n\t\n\t\n\tRepresentation Learning and GANs\n\t\n\t\tIntroduction to autoencoders\n\t\tStacked autoencoders\n\t\tIntroduction to GAN\n\t\n\t\n\tReinforcement Learning\n\t\n\t\tIntroduction to reinforcement learning\n\t\tIntroduction to OpenAI gym\n\t\tQ-learning\n\t\tDeep Q-Learning\n\t\n\t\n\tDeploying model on cloud (AWS)\n\t\n\t\tSaving models\n\t\tServing TensorFlow model\n\t\n\t\n                                                \n                                                Click to Register"
+        },
+        {
+            "title": "Pre-requisites:",
+            "content": "Python fundamentals\n\t\n\t\tCollections\n\t\tFunctions\n\t\tClasses\n\t\tDecorators\n\t\tPackages\n\t\t\n\t\t\tNumpy\n\t\t\tPandas\n\t\t\tMatplotlib\n\t\t\n\t\t\n\t\n\t\n\tStatistics fundamentals\n\n\n\n\tNote: Training videos on important topics will be shared for your own practice\n                                                \n                                                Click to Register"
+        },
+        {
+            "title": "Outcome:",
+            "content": "You will be able to understand when, where and how to use ML\n\tYou will be able to solve problems related to regression, classification, AI etc.\n\tYou will be able to create models which can be used in desktop and mobile applications\n                                                \n                                                Click to Register"
+        },
+        {
+            "title": "Important Note:",
+            "content": "Course does not cover the following:\n\t\n\t\tPython Programming Syntax, even though entire ML programming will be done in Python. (Join prerequisite course : python-development)\n\t\tStatistics behind ML algorithms, however foundations of descriptive & inferential statistics are covered exclusively (Refer syllabus).\n\t\tWeb technologies, however serving ML model in the web application is covered.\n\t\n\t\n                                                \n                                                Click to Register"
+        },
+        {
+            "title": "Software Setup:",
+            "content": "Python 3.x\n\tIDE: Pycharm\n\tPackages: numpy, pandas, scikit, pytorch, keras, flask\n                                                \n                                                Click to Register"
+        },
+        {
+            "title": "Student Feedback:",
+            "content": "The excellent teaching style and excellent understanding of teaching topics. What I like the most about the course is how Amit Sir helps to improve visualization of code using proper diagrams and images. Also, proper sequencing of sample examples helps to revise the topic in the future. It’s good that sir gives more time on basic topics in the beginning so that the foundation is strong. Your knowledge and leadership provide us with a priceless model for our own careers. I am so happy you are part of my education. I learned to truly care about diversity and inclusion through your classes, and I hope now spread that message in a passionate but thoughtful way. You’re awesome!\n\n\n\n\nAmazing skill of teaching and a very well structured course for people to start to learn to machine learning. The assignments are very good for understanding the practical side of machine learning. To all those thinking of getting in ML, this is a must-have course. Kindly continue these online sessions post COVID-19 pandemic. It's really helpful for those who cannot come to the institute due to timing issues /working out of Pune etc. but willing to learn from you all. \n\nThank You.\n\n\n\n\nKudos to Sunbeam and Amit Sir again, for conducting Machine Learning with Python course in such a great manner. Amit Sir teaching as always is very precise and he goes out of this schedule to answer and cover, each and every doubt of the students and the topic in the syllabus. The course was also extended by a week, so as to cover all the topics in a meticulous manner. \n\nThank you Amit Sir and Sunbeam once again :)\n\n\n                                                 \n                                                Click to Register"
+        }
+    ],
+    "batch_schedule_table": [
+        {
+            "Sr.No": "1",
+            "Batch Code": "ML-O-07",
+            "Start Date": "26-Oct-2023",
+            "End Date": "28-Nov-2023",
+            "Time": "07:30 AM  To  9:30 AM"
+        }
+    ]
+}

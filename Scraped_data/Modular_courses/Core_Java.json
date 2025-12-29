@@ -1,0 +1,42 @@
+{
+    "course_name": "Core Java",
+    "url": "https://sunbeaminfo.in/modular-courses/core-java-classes",
+    "general_info": {
+        "summary": "Course Name : Core Java | Batch Schedule : 23-Jan-2026   To   20-Feb-2026 | Schedule : Weekdays - (Mon-Fri) | Duration : 80 Hrs | Timings : 9:00 AM  To  1:00 PM | Fees : Rs. 6800/- (Inc. 18% GST)"
+    },
+    "sections": [
+        {
+            "title": "Target Audience:",
+            "content": "Students\n\tFresher's\n\tWorking professionals \n                                                \n                                                Click to Register"
+        },
+        {
+            "title": "Syllabus:",
+            "content": "Java Language Fundamentals\n\t\n\t\tJava language features\n\t\tOverview of JDK, JRE and JVM\n\t\tData types and wrapper classes\n\t\tPackage, path and classpath\n\t\tArrays, Enum, jar file\n\t\n\t\n\tOOPs Concept\n\t\n\t\tClass, reference, instance\n\t\tConstructor chaining\n\t\tObject class\n\t\tStatic initializer block\n\t\tAssociation and inheritance\n\t\tPolymorphism and dynamic method dispatch\n\t\tAbstract class and Interface\n\t\n\t\n\tException Handling\n\t\n\t\tError and exception\n\t\tChecked and unchecked Exception\n\t\tTry-with-resource\n\t\tMulti-catch block\n\t\tCustom exception\n\t\tChained exceptions\n\t\n\t\n\tFunctional Programming Fundamentals\n\t\n\t\tNested and local class\n\t\tAnonymous inner class\n\t\tFunctional interface\n\t\tLambda expression\n\t\tMethod and constructor references\n\t\tConstructor Reference\n\t\n\t\n\tGenerics\n\t\n\t\tBoxing/Auto-Boxing and Unboxing/Auto-Unboxing\n\t\tParameterized type\n\t\tBounded type parameter\n\t\tWild Card and its type\n\t\tGeneric method\n\t\n\t\n\tString Handling\n\t\n\t\t Overview of UNICODE\n\t\tString, StringBuffer and StringBuilder\n\t\tStringTokenizer\n\t\tRegular expression\n\t\n\t\n\tCollection Framework\n\t\n\t\tComparable versus Comparator\n\t\tList, ArrayList, Vector\n\t\tSet, TreeSet\n\t\tHashing\n\t\tHashSet, Hashtable and HashMap\n\t\tJava 8 Streams\n\t\n\t\n\tMultithreading\n\t\n\t\t Advantages & issues of process & thread\n\t\tThread class and Runnable\n\t\tThread States, life cycle\n\t\tRace condition, deadlock, monitor\n\t\tSynchronization and Object class\n\t\n\t\n\tFile IO \n\t\n\t\tPath basics\n\t\tText file and binary file processing\n\t\tSerialization and deserialization\n\t\tSerialVersionUID\n\t\n\t\n\tReflection\n\t\n\t\tMetadata and its application\n\t\tjava.lang.Class class\n\t\tOverview of reflection classes and interfaces\n\t\tDynamic method invocation\n\t\n\t\n                                                \n                                                Click to Register"
+        },
+        {
+            "title": "Pre-requisites:",
+            "content": "OOP concepts: Class, Object, overloading, constructor, inheritance and virtual function.\n                                                \n                                                Click to Register"
+        },
+        {
+            "title": "Software Setup:",
+            "content": "SDK: Open JDK 1.8\n\tEditor: MS VS Code\n\tIDE: Eclipse\n                                                \n                                                Click to Register"
+        },
+        {
+            "title": "Student Feedback:",
+            "content": "Rohan Parmane: Your dedication and passion for teaching truly shine through in every lesson. Your ability to engage students and make complex concepts understandable is impressive. The positive environment you create in the classroom fosters both learning and growth. Keep up the excellent work Your thoughtful approach and dedication are greatly appreciated by me.\n\n\n\n\nKetan Kore: I've had the pleasure of learning Core Java under the tutelage of Sir, and I must say that he's the best mentor I've had. Their thorough understanding of Java fundamentals, combined with their ability to present complex topics in a straight forward and understandable manner, has been quite helpful in my learning process.\n\n\n\n\nKetan Kore: Your explanations are always clear and well-structured, which helps grasp difficult concepts more easily.Nice teaching, best interaction with us, great at doubt solving.\n\n\n\n\nRohan Parmane: excellent I will miss Sunbeam Teaching. Sir taught us very well. we got so much knowledge about java in just a little time. sir explained each concept very easily and understandably. Thank you sir for your valuable guidance.\n\n\n                                                 \n                                                Click to Register"
+        },
+        {
+            "title": "Recorded Videos:",
+            "content": "Recorded videos will be accessible for up to 7 Days from the date of upload.                                                \n                                                Click to Register"
+        }
+    ],
+    "batch_schedule_table": [
+        {
+            "Sr.No": "1",
+            "Batch Code": "CJ-O-17",
+            "Start Date": "23-Jan-2026",
+            "End Date": "20-Feb-2026",
+            "Time": "9:00 AM  To  1:00 PM"
+        }
+    ]
+}

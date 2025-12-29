@@ -1,0 +1,30 @@
+{
+    "course_name": "MLOps & LLMOps",
+    "url": "https://sunbeaminfo.in/modular-courses/mlops-llmops-training-institute-pune",
+    "general_info": {
+        "summary": "Course Name : MLOps & LLMOps | Batch Schedule : 24-Nov-2025   To   05-Dec-2025 | Schedule : Monday to Friday (9pm to 11pm) | Duration : 2 weeks | Timings : 9:00 PM  To  11:00 PM | Fees : Rs. 8000/- Special Offer for Sunbeam Alumni 5900"
+    },
+    "sections": [
+        {
+            "title": "Prerequisites:",
+            "content": "Python Libraries: numpy, pandas, matplotlib, sci-kit learn, pytorch\n\tSCM: git\n\tCI/CD Pipeline:\n\t\n\t\tJenkins and GitHub Actions: scripted pipeline configuration\n\t\n\t\n\tContainerization:\n\t\n\t\tDocker: installation and configuration, building custom images, containers, volumes, networks, port forwarding\n\t\n\t\n\tContainer Orchestration:\n\t\n\t\tKubernetes: cluster management, namespaces, pods, policies, services, configmap, secrets, networking, storage, autoscaling\n\t\n\t\n\tCloud:\n\t\n\t\tAWS: EC2, ELB, Autoscaling, VPC, S3, Lambda, DevOps on AWS\n\t\n\t\n\tInfrastructure as a code:\n\t\n\t\tTerraform: AWS infrastructure management\n\t\n\t\n\tModel building using scikit-learn and pytorch or tensorflow\n                                                \n                                                Click to Register"
+        },
+        {
+            "title": "Syllabus:",
+            "content": "Experiment Tracking: MLFlow, Weights and Biases\n\tData and model versioning: dvc and LakeFS\n\tContainerization of models: Docker\n\tMLOps Pipeline: KubeFlow and MLFlow\n\tModel serving: KServe, Tensorflow Serving\n\tCI/CD for MLOps: Jenkins and GitHub Actions\n\tObservability: ELK\n\tMonitoring: Prometheus and Grafana\n                                                \n                                                Click to Register"
+        },
+        {
+            "title": "VIdeo recording will be available till 05 March 2026 on SunBeam Portal",
+            "content": "Click to Register"
+        }
+    ],
+    "batch_schedule_table": [
+        {
+            "Sr.No": "1",
+            "Batch Code": "MLOps and LLMOps (O-01)",
+            "Start Date": "24-Nov-2025",
+            "End Date": "05-Dec-2025",
+            "Time": "9:00 PM  To  11:00 PM"
+        }
+    ]
+}
