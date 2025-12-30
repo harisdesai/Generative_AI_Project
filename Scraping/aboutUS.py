@@ -80,5 +80,5 @@ def scrape_aboutUS(url, filename):
         print(f"Error scraping {url}: {e}")
 
 # Run for both pages
-scrape_complete_sunbeam_page("https://sunbeaminfo.in/about-us", "sunbeam_about_us.json")
+scrape_aboutUS("https://sunbeaminfo.in/about-us", "sunbeam_about_us.json")
 driver.quit()
