@@ -1,0 +1,26 @@
+{
+    "course_name": "MERN (Full Stack) Development",
+    "url": "https://sunbeaminfo.in/modular-courses/mern-full-stack-developer-course",
+    "general_info": {
+        "summary": "Course Name : MERN (FULL-STACK) DEVELOPMENT | Batch Schedule : 02-Jun-2025   To   03-Jul-2025 | Schedule : Mon-Thu | Duration : 40 hrs. | Timings : 09:00 PM  To  11:00 PM | Fees : Rs. 9100/-"
+    },
+    "sections": [
+        {
+            "title": "Syllabus",
+            "content": "NODE\n\n\n\tIntroduction\n\n\t\n\t\twhat is node\n\t\tadvantages and limitations\n\t\n\t\n\tEnvironment setup\n\t\n\t\tinstall node\n\t\tcreate a new project\n\t\tconfigure project properties\n\t\tdebugging node application\n\t\n\t\n\tBasics\n\t\n\t\tintroduction to npm\n\t\tintroduction to package.json\n\t\timporting npm modules\n\t\tcommand line arguments\n\t\tnode async vs sync\n\t\tthreading model\n\t\n\t\n\tmicroservices\n\t\n\t\tintroduction to microservices\n\t\tdeveloping microservices using js\n\t\tconfiguration\n\t\tdeployment\n\t\n\t\n\tHttp\n\t\n\t\tcreating web server\n\t\tcalling REST apis\n\t\n\t\n\tExpress\n\t\n\t\tintroduction to express\n\t\tcreate new project\n\t\texpress routes and router\n\t\tmiddleware\n\t\tconnecting to database\n\t\tadding authentication\n\t\n\t\n\tNode modules\n\t\n\t\tfile system\n\t\tbuffer\n\t\texpress\n\t\tcrypto-js\n\t\tmulter\n\t\tmysql2\n\t\tpostgres\n\t\tmoment\n\t\tpassport\n\t\tmorgan\n\t\n\t\n\n\nReact\n\n\n\tSetting up environment\n\n\t\n\t\tinstalling nodejs\n\t\tinstalling and configuring babel\n\t\tinstalling and configuring webpack\n\t\n\t\n\tIntroduction to SPA\n\t\n\t\twhat is single page architecture?\n\t\tSPA architecture\n\t\tPros and Cons\n\t\tother SPA frameworks\n\t\n\t\n\tReact fundamentals\n\t\n\t\tintroduction to components\n\t\tcomponent oriented architecture\n\t\twhat components ?\n\t\tenvironment setup for react and react native\n\t\tbuild workflow\n\t\n\t\n\tReact basics\n\t\n\t\thello world react app\n\t\tcreating functional component\n\t\tcreating dynamic output\n\t\tcomponent lifecycle\n\t\tdebugging react application\n\t\tworking with props\n\t\tstyling react component\n\t\n\t\n\tIntroduction to state management\n\t\n\t\trules of state management\n\t\tinitializing state through constructors\n\t\tupdating state properties\n\t\tapp lifecycle\n\t\thandling errors\n\t\n\t\n\tIntroduction to Redux\n\t\n\t\twhy redux?\n\t\tpros and cons\n\t\tredux architecture\n\t\tactions\n\t\tstore\n\t\treducers\n\t\n\t\n\tAdvanced Redux concepts and integration\n\t\n\t\tconnecting react to redux\n\t\tmapStateToProps\n\t\tmapDispatchToProps\n\t\tasync in redux\n\t\tasync status and error handling\n\t\n\t\n\tBasic and advanced Routing\n\t\n\t\tintroduction to routing\n\t\troot level routing\n\t\tchild level routing\n\t\n\t\n\tReact hooks\n\t\n\t\twhat is hook?\n\t\trules of hook\n\t\tusing state hook\n\t\tusing effect hook\n\t\tbuilding custom hook\n\t\n\t\n\tHandling online payment\n\t\n\t\tconnecting react with online payment gateway\n\t\n\t\n\tTesting React components\n\t\n\t\ttesting overview\n\t\tsetting up environment\n\t\ttesting react components\n\t\t \n\t\n\t\n                                                \n                                                Click to Register"
+        },
+        {
+            "title": "Pre-requisites:",
+            "content": "Object Oriented Programming Concepts\n\tAny RDBMS (SQL)\n\tWeb Programming Fundamentals (HTML, CSS, JS)\n                                                \n                                                Click to Register"
+        }
+    ],
+    "batch_schedule_table": [
+        {
+            "Sr.No": "1",
+            "Batch Code": "MERN-O-03",
+            "Start Date": "02-Jun-2025",
+            "End Date": "03-Jul-2025",
+            "Time": "09:00 PM  To  11:00 PM"
+        }
+    ]
+}

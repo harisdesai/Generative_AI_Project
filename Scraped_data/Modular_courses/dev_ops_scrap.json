@@ -1,0 +1,34 @@
+{
+    "course_name": "Dev Ops",
+    "url": "https://sunbeaminfo.in/modular-courses/Devops-training-institute",
+    "general_info": {
+        "summary": "Course Name : Dev Ops | Batch Schedule : 15-Sep-2025   To   20-Nov-2025 | Schedule : Mon - Thu | Duration : 80 Hrs | Timings : 9:00 PM  To  11:00 PM | Fees : Rs. 11100/-"
+    },
+    "sections": [
+        {
+            "title": "Syllabus",
+            "content": "Week 1: Linux\n\n\n\tDevOps\n\t\n\t\tIntroduction to DevOps\n\t\tSDLC and Agile fundamentals\n\t\tDevOps Lifecyle\n\t\tIntroduction to the Tools used in DevOps Lifecyle\n\t\n\t\n\tLinux\n\t\n\t\tInstallation and configuration using VM\n\t\tBooting\n\t\tFile System\n\t\tWorking with Text files\n\t\tArchiving and compressing files\n\t\tUser and Group management\n\t\tFile Permissions\n\t\tPackage management\n\t\tSystemd management\n\t\n\t\n\n\n \n\nWeek 2: Git\n\n\n\tFoundation of VCS\n\tWhat is Git?\n\tGit Workflow\n\tGit Internals\n\tDemystifying branching\n\tCollaboration with GitHub\n\n\n \n\nWeek 3: Docker\n\n\n\tVirtualization\n\tHardware virtualization vs Containerization\n\tDocker fundamentals\n\tArchitecture\n\tInstallation and configuration\n\tImage management\n\tContainer management\n\tDocker network\n\tPersisting data with Docker volumes\n\tContainer Orchestration with Docker Swarm\n\n\n \n\nWeek 4: Kubernetes\n\n\n\tIntroducing Kubernetes and its features\n\tArchitecture\n\tInstallation of configuration of Kubernetes cluster\n\tPod management\n\tSecrets and ConfigMaps\n\tService and Networking\n\tState persistence with PersistentVolumes and PersistentVolumeClaims\n\tObservability\n\tProbes\n\n\n \n\nWeek 5: Jenkins\n\n\n\tIntroduction to CI/CD pipeline\n\tJenkins cluster installation and configuration\n\tConfiguration of pipeline\n\tScripted pipeline\n\tImplementing security with Jenkins\n\tSetting up notifications\n\tUsing Jenkinsfile\n\n\n \n\nWeek 6: AWS\n\n\n\tIntroduction to Cloud\n\tWhat is AWS?\n\tAWS Services\n\t\n\t\tCompute Services:\n\t\t\n\t\t\tEC2 instance\n\t\t\tVPC\n\t\t\tLambda\n\t\t\n\t\t\n\t\tStorage Services: S3\n\t\tDatabase Services: RDS (MySQL)\n\t\tDevOps Services: CodeCommit, CodeBuild, CodeDeploy, X-Ray\n\t\tContainer Services: ECS, EKS\n\t\n\t\n\n\n \n\nWeek 7: Terraform\n\n\n\tInfrastructure as a Code\n\tInstallation and Configuration\n\tTerraform foundation\n\tWorkflow\n\tTerraform modules\n\tImplementing and maintaining states\n\tHCP Terraform\n\n\n \n\nWeek 8: Ansible\n\n\n\tIntroduction to Ansible\n\tPull vs Push method\n\tInstallation and Configuration\n\tArchitecture and Design of Ansible\n\tDiving into playbooks\n\tUsing Ansible with cloud\n\tUsing Ansible with containers\n\tModules and plugins\n                                                \n                                                Click to Register"
+        },
+        {
+            "title": "Prerequisites",
+            "content": "Basic Linux administration\n\tKnowledge of any development stack\n\tKnowledge of testing tools like Selenium and JUnit\n\tKnowledge of build tools like Ant/Gradle/Maven\n                                                \n                                                Click to Register"
+        },
+        {
+            "title": "Getting Started with DevOps",
+            "content": "Click to Register"
+        },
+        {
+            "title": "Diwali Vacation Break:",
+            "content": "Diwali Holidays are scheduled from 17th October 2025 to 31st October 2025.                                                \n                                                Click to Register"
+        }
+    ],
+    "batch_schedule_table": [
+        {
+            "Sr.No": "1",
+            "Batch Code": "Dev Ops-O-06",
+            "Start Date": "15-Sep-2025",
+            "End Date": "20-Nov-2025",
+            "Time": "9:00 PM  To  11:00 PM"
+        }
+    ]
+}

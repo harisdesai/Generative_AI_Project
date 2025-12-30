@@ -1,0 +1,46 @@
+{
+    "course_name": "Apache Spark Mastery - Data Engineering with PySpark",
+    "url": "https://sunbeaminfo.in/modular-courses/apache-spark-mastery-data-engineering-pyspark",
+    "general_info": {
+        "summary": "Course Name : Apache Spark Mastery - Data Engineering with PySpark | Batch Schedule : 16-Aug-2025   To   17-Sep-2025 | Schedule : Mon-Sat | Duration : 50 hrs. | Timings : 7:00 PM  To  9:00 PM | Fees : Rs. 14900/-(Inc.18% GST)"
+    },
+    "sections": [
+        {
+            "title": "Target Audience:",
+            "content": "Data Engineers, Python Developers, Freshers                                                \n                                                Click to Register"
+        },
+        {
+            "title": "Syllabus:",
+            "content": "Section 1: Spark Architecture & Internals\n\n- Distributed Computing Fundamentals\n\n  - RDD lineage, DAG scheduler, lazy evaluation\n\n  - Cluster managers overview\n\n- Spark 4.x Updates\n\n  - Adaptive Query Execution (AQE) enhancements\n\n  - Catalyst optimizer improvements\n\n- Performance Tuning\n\n  - Joins\n\n  - Partitioning, broadcast variables\n\n  - Memory management\n\nSection 2: PySpark DataFrames & SQL\n\n- Data Manipulation\n\n  - Complex types (JSON, arrays, maps)\n\n  - Window functions, pivot tables, UDFs/Pandas UDFs\n\n- Spark SQL Deep Dive\n\n  - Temp views, catalog API, Hive metastore integration\n\n  - SQL syntax for Delta Lake operations\n\n- Execution Plans\n\n  - Reading `explain()` output\n\n  - Predicate pushdown, partition pruning\n\nSection 3: Incremental Data Processing & Apache Kafka\n\n- Structured Streaming\n\n  - Event-time processing, watermarking, state management\n\n  - Kafka integration (source/sink)\n\n- Delta Lake Essentials\n\n  - ACID transactions\n\n  - Schema evolution\n\nSection 4: Spark Optimizations\n\n- Catalyst Internals\n\n  - Logical vs. physical plans\n\n  - Custom optimization extensions\n\n- Performance Best Practices\n\n  - File formats (Parquet/Delta)\n\n  - Resource allocation (executors/cores)\n\nSection 5: Databricks Lakehouse Platform\n\n- Lakehouse fundamentals\n\n- Workspace Navigation\n\n  - DBFS, clusters, notebooks\n\n- Delta Lake UI\n\n  - Viewing table history/schema\n\n- Data Governance\n\n  - Unity Catalog basics (no Admin tasks)\n\nSection 6: Apache Kafka Fundamentals  \n\n- Architecture\n\n  - Brokers, topics, partitions, consumer groups\n\n- Spark-Kafka Integration\n\n  - Structured Streaming with Kafka\n\n  - Job execution\n\nSection 7: Spark ML Introduction\n\n- MLlib Workflow\n\n  - Transformers vs. estimators, pipelines\n\n  - Feature engineering (VectorAssembler, StringIndexer)\n\n- Model Training\n\n  - Regression demo (no hyperparameter tuning)\n\nSection 8: Capstone Project\n\n- Pipeline implementation\n\n- Domain Examples: IoT monitoring, retail analytics\n\n                                                 \n                                                Click to Register"
+        },
+        {
+            "title": "Prerequisites:",
+            "content": "1. Python: Language Fundamentals, Functions, Collections, Pandas, ...\n\n2. SQL: CRUD Operations, Group By, Joins, Analytical queries, …\n\n3.Good to have: Linux basics, Hadoop/Hive knowledge beneficial                                                \n                                                Click to Register"
+        },
+        {
+            "title": "Tools & Setup:",
+            "content": "- Local Installation: Spark 4.x, Java 11, Python 3.10  \n\n- Cloud: Databricks Community/Free Edition                                                \n                                                Click to Register"
+        },
+        {
+            "title": "Outcome:",
+            "content": "Master PySpark DataFrames/SQL for batch & stream processing\n\tBuild optimized pipelines using Catalyst insights\n\tUnderstand Spark job execution internals\n\tUnderstand Apache Kafka and Integrate with Spark\n\tHands-on implementation of capstone project\n\tCertification-ready skills\n                                                \n                                                Click to Register"
+        },
+        {
+            "title": "Important Notes:",
+            "content": "1. Developer-Centric Focus:\n\n- Covers PySpark application development (coding, debugging, optimization).\n\n- Excludes: Cluster administration, infrastructure setup (YARN/K8s), or Spark cluster tuning.\n\n2. Machine Learning Scope:\n\n- Only introductory-level Spark ML (pipeline structure, basic concept).\n\n- Excludes: Advanced ML concepts (hyperparameter tuning, etc), DL frameworks, or MLOps.\n\n3. Language & Environment:\n\n- PySpark (Python API) only – Scala/Java/R APIs not covered.\n\n- Databricks usage focuses on developer work, not account/admin management.\n\n4. Kafka Integration:\n\n- Covers Spark-as-Consumer/Producer – not professional Kafka cluster setup, security, or Streams API.\n\n5. Infrastructure Assumptions:\n\n- All labs use local/standalone mode or Databricks Community Edition.                                                \n                                                Click to Register"
+        },
+        {
+            "title": "Video Availability till date:",
+            "content": "17th Nov 25                                                \n                                                Click to Register"
+        }
+    ],
+    "batch_schedule_table": [
+        {
+            "Sr.No": "1",
+            "Batch Code": "Spark-O-04",
+            "Start Date": "16-Aug-2025",
+            "End Date": "17-Sep-2025",
+            "Time": "7:00 PM  To  9:00 PM"
+        }
+    ]
+}
