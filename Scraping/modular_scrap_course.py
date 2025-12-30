@@ -49,8 +49,7 @@ def scrape_modular_courses(URL, course_name, output_filename):
             driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", link)
             time.sleep(1)
             driver.execute_script("arguments[0].click();", link)
-            time.sleep(2) # Wait for content to render
-            
+            time.sleep(2)
             # Check for Batch Schedule Table
             if "Batch schedule" in header_text:
                 try:
