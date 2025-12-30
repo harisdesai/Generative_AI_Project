@@ -10,7 +10,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 def scrape_modular_courses(URL, course_name, output_filename):
     # 1. Setup Browser
     options = Options()
-    # options.add_argument("--headless") 
+    options.add_argument("--headless") 
     driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 
     try:
@@ -49,8 +49,7 @@ def scrape_modular_courses(URL, course_name, output_filename):
             driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", link)
             time.sleep(1)
             driver.execute_script("arguments[0].click();", link)
-            time.sleep(2) # Wait for content to render
-            
+            time.sleep(2)
             # Check for Batch Schedule Table
             if "Batch schedule" in header_text:
                 try:
