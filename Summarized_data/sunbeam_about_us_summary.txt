@@ -1,0 +1,15 @@
+**Course Overview:**
+This course is about Sunbeam Infotech, a training and solutions provider that offers industry-relevant programs and value-added services to its clients. The primary goal is to highlight Sunbeam's expertise, track record, and capabilities in delivering high-end technological training and solutions.
+
+**Key Data Extraction:**
+
+* **Official Course Name:** Sunbeam About Us
+* **Exact Fees:** Not found in the provided JSON data.
+* **Course Duration and Timings:** Not found in the provided JSON data.
+* **Technical Syllabus (Grouped into logical modules):** Not found in the provided JSON data.
+* **Target Audience and Prerequisites:** Not found in the provided JSON data.
+
+However, the JSON data does provide some information about Sunbeam's capabilities and services, which can be inferred as follows:
+
+* **Target Audience:** Professionals focused on aggressive career growth strategies, students, and establishments focused on aggressive growth strategies.
+* **Prerequisites:** Not explicitly mentioned, but it can be inferred that a basic understanding of IT and technology is required to appreciate Sunbeam's services and expertise.

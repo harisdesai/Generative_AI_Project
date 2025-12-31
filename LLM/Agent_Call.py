@@ -1,113 +1,184 @@
 import os
-import time
+from typing import List, Optional
 from dotenv import load_dotenv
 from langchain.chat_models import init_chat_model
+from langchain.agents import create_agent
+from langchain.tools import tool
 from langchain_chroma import Chroma
-from langchain_core.messages import HumanMessage, AIMessage, SystemMessage
+from langchain_core.messages import HumanMessage, SystemMessage, AIMessage
 import embedding 
 
 load_dotenv()
 
-# --- 1. KNOWLEDGE BASE ---
+# --- 1. VECTOR STORE CONNECTION ---
+script_dir = os.path.dirname(os.path.abspath(__file__))
+DB_DIR = os.path.abspath(os.path.join(script_dir, "..", "Embedding", "knowledgebase"))
+
+print(f"📂 Attempting to connect to database at: {DB_DIR}")
+
 vectorstore = Chroma(
-    persist_directory="./knowledgebase",
+    persist_directory=DB_DIR,
     embedding_function=embedding.embed_model,
     collection_name="sunbeam_data"
 )
 
-# --- 2. THE 4 PILLAR TOOLS ---
+# Debugging: Quick check of document count
+try:
+    count = vectorstore._collection.count()
+    print(f"📊 Database Status: SUCCESS! {count} documents found.")
+except Exception as e:
+    print(f"❌ Database Status: Error connecting to collection - {e}")
 
-def search_internship(query: str):
-    """Accesses Internship data (₹4,000/-). Covers: Generative AI, MERN, Java, .NET, Python, Web Dev, etc."""
-    results = vectorstore.similarity_search(query, k=5, filter={"category": "Internship_Scrap"})
-    return "\n\n".join([d.page_content for d in results])
+# --- 2. DEFINE SPECIALIZED TOOLS ---
 
-def search_modular(query: str):
+@tool
+def list_all_offerings(category_type: Optional[str] = None) -> str:
     """
-    Accesses Modular Course data. 
-    12 Courses: Java Mastery, .NET Mastery, MERN Stack, Mean Stack, Python, PHP/Laravel, 
-    DevOps, Apache Spark, Android, Software Testing, C++ Programming, and SQL.
+    Use this tool ONLY when the user wants a list of ALL courses or ALL categories.
+    Args:
+        category_type: Optional filter. Use 'modular_split' for Modular courses or 'summary_file' for individual summaries.
     """
-    results = vectorstore.similarity_search(query, k=15, filter={"category": "Modular_courses"})
-    return "\n\n".join([d.page_content for d in results])
+    print(f"📋 [Tool] Listing all offerings for type: {category_type}")
+    
+    # We fetch more documents here (k=20) because listing requires high recall
+    # We use metadata filtering if the agent provides a type
+    search_filter = {"type": category_type} if category_type else None
+    results = vectorstore.get(where=search_filter)
+    
+    if not results or not results['metadatas']:
+        return "No offerings found in the database."
 
-def search_precat(query: str):
-    """Accesses Pre-CAT data for C-DAC entrance exam preparation."""
-    results = vectorstore.similarity_search(query, k=3, filter={"category": "Pre-CAT"})
-    return "\n\n".join([d.page_content for d in results])
+    # Extract unique categories from metadata to create a clean list
+    categories = sorted(list(set([m.get('category') for m in results['metadatas']])))
+    return "Available Sunbeam Offerings:\n- " + "\n- ".join(categories)
 
-def search_mcq(query: str):
-    """Accesses Mastering MCQ and Campus Placement Preparation data."""
-    results = vectorstore.similarity_search(query, k=3, filter={"category": "Mastering_mcqs"})
-    return "\n\n".join([d.page_content for d in results])
+@tool
+def search_course_details(query: str, specific_category: Optional[str] = None) -> str:
+    """
+    Search for technical course details including syllabus, fees, and duration.
+    Args:
+        query: The search term.
+        specific_category: Optional category name if the user mentioned a specific course (e.g., 'Core Java').
+    """
+    print(f"🔍 [Tool] Searching Course: '{query}' in Category: {specific_category}")
+    
+    # If a specific category is known, we filter by it to be 100% accurate
+    search_filter = {"category": specific_category} if specific_category else None
+    
+    # MMR search for diversity
+    results = vectorstore.max_marginal_relevance_search(
+        query, 
+        k=5, 
+        fetch_k=20, 
+        filter=search_filter
+    )
+    
+    if not results:
+        return f"No specific details found for '{query}'."
 
-# --- 3. THE GURU LOGIC ---
+    formatted_results = []
+    for i, d in enumerate(results):
+        cat = d.metadata.get('category', 'General')
+        formatted_results.append(f"--- SOURCE: {cat} ---\n{d.page_content}")
+    
+    return "\n\n".join(formatted_results)
 
+@tool
+def search_sunbeam_info(query: str) -> str:
+    """Search for general info: Address, Contacts, About Us, and Internships."""
+    print(f"🔍 [Tool] Searching General Info: '{query}'")
+    results = vectorstore.similarity_search(query, k=6)
+    
+    if not results:
+        return "No general information found."
+
+    formatted_results = []
+    for i, d in enumerate(results):
+        cat = d.metadata.get('category', 'General')
+        formatted_results.append(f"--- SOURCE: {cat} ---\n{d.page_content}")
+    
+    return "\n\n".join(formatted_results)
+
+tools = [list_all_offerings, search_course_details, search_sunbeam_info]
+
+# --- 3. INITIALIZE LLM ---
 llm = init_chat_model(
-    model="llama-3.1-8b-instant",
+    model="llama-3.3-70b-versatile",
     model_provider="openai",
     base_url="https://api.groq.com/openai/v1",
     api_key=os.getenv("groq_api_key"),
     temperature=0
 )
 
-# System Message as a formal object
-SYSTEM_MSG = SystemMessage(content="""
-You are the Sunbeam Guru. Strictly follow these rules:
-1. GREETINGS: Respond normally to 'hi' or 'hello'.
-2. AMBIGUITY (CRITICAL): If a user asks for 'Java', '.NET', 'MERN', or 'Python' without 
-   specifying, ASK: "Are you interested in the 1-month Internship (₹4,000) or the Modular Course?"
-3. FEES: If fees are asked, check both general info and batch schedules within the specific data.
-4. SCOPE: Only answer about Sunbeam Infotech.
-""")
+# --- 4. THE GURU SYSTEM PROMPT ---
+SYSTEM_PROMPT = (
+    "You are the 'Sunbeam Guru', a strictly data-driven counselor for Sunbeam Infotech.\n\n"
+    "### TOOL USAGE STRATEGY:\n"
+    "1. LISTING: If the user asks 'list all courses' or 'what modular courses do you have?', use 'list_all_offerings'.\n"
+    "2. SPECIFIC SEARCH: If they ask about a specific course (e.g., 'Spark fee'), use 'search_course_details'.\n"
+    "3. DISCOVERY: If you've listed the courses and the user picks one, use 'search_course_details' with the 'specific_category' filter.\n\n"
+    "### MANDATORY INSTRUCTIONS:\n"
+    "- Rely ONLY on retrieved data. If a tool returns ₹14,900, say ₹14,900.\n"
+    "- If a user asks a conceptual question (e.g., 'What is a Lambda in Java?'), answer directly using your own knowledge.\n"
+    "- For all Sunbeam-specific facts (fees, syllabus, address), you MUST use tools.\n"
+    "- Refuse non-academic/non-Sunbeam queries politely."
+)
 
-def get_guru_response(user_input, history):
-    # history is now a list of Message objects
-    
-    # 1. Decide if we need a tool or just chat
-    # Note: We check user_input for intent
-    context = ""
-    if any(word in user_input.lower() for word in ["internship", "project"]):
-        context = search_internship(user_input)
-    elif any(word in user_input.lower() for word in ["java", "mern", "spark", "modular", "dotnet", "cpp"]):
-        # Check for ambiguity first
-        if "internship" not in user_input.lower() and "modular" not in user_input.lower():
-            return "I see you're interested in that tech! Are you looking for the 1-month Internship (₹4,000) or the deep-dive Modular course?"
-        context = search_modular(user_input)
-    elif "cat" in user_input.lower() or "entrance" in user_input.lower():
-        context = search_precat(user_input)
-    elif "mcq" in user_input.lower() or "placement" in user_input.lower():
-        context = search_mcq(user_input)
-    else:
-        # General chat/About/Contact
-        res = vectorstore.similarity_search(user_input, k=3, filter={"category": {"$in": ["aboutUS", "contactUS"]}})
-        context = "\n\n".join([d.page_content for d in res])
+# --- 5. CREATE THE AGENT ---
+agent = create_agent(model=llm, tools=tools, system_prompt=SYSTEM_PROMPT)
 
-    # 2. Build the full message list for LangChain
-    # We combine: [System Message] + [History] + [Current User Prompt + Context]
-    context_aware_prompt = f"Context from Sunbeam Data:\n{context}\n\nUser Question: {user_input}"
+# --- 6. CHAT ROUTING LOGIC ---
+def chat_with_guru(user_input: str, history: List):
+    user_query = user_input.lower().strip()
     
-    messages = [SYSTEM_MSG] + history + [HumanMessage(content=context_aware_prompt)]
+    # Trigger keywords for data retrieval
+    needs_data = ["fee", "cost", "price", "syllabus", "list", "batch", "address", 
+                  "contact", "phone", "internship", "cat", "pre-cat", "course"]
     
-    # 3. Generate response
-    response = llm.invoke(messages)
-    return response.content
+    if any(word in user_query for word in needs_data):
+        print(f"🤖 [Agent] Routing to Tool Path: '{user_input}'")
+        clean_history = []
+        for msg in history:
+            if isinstance(msg, (HumanMessage, AIMessage)):
+                if isinstance(msg, AIMessage):
+                    msg.tool_calls = []
+                clean_history.append(msg)
 
-# --- 4. EXECUTION ---
-print("🚀 Sunbeam Guru is Online! (Fixed History Management)")
-chat_history = []  # Changed from string to list
+        input_data = {"messages": clean_history + [HumanMessage(content=user_input)]}
+        
+        try:
+            response = agent.invoke(input_data)
+            return response["messages"][-1].content
+        except Exception as e:
+            print(f"❗ [Agent] Error: {e}")
+            fallback_res = vectorstore.similarity_search(user_input, k=5)
+            context = "\n\n".join([f"[{d.metadata.get('category')}]: {d.page_content}" for d in fallback_res])
+            messages = [
+                SystemMessage(content=SYSTEM_PROMPT + "\n\nCONTEXT:\n" + context),
+                HumanMessage(content=user_input)
+            ]
+            return llm.invoke(messages).content
 
-while True:
-    u_in = input("\nStudent: ")
-    if u_in.lower() in ["exit", "quit"]: break
+    # Greetings / Small Talk / Conceptual Q&A
+    print(f"💬 [Agent] Routing to Direct Chat Path.")
+    messages = [SystemMessage(content=SYSTEM_PROMPT)] + history + [HumanMessage(content=user_input)]
+    return llm.invoke(messages).content
+
+# --- 7. RUNTIME ---
+if __name__ == "__main__":
+    print("\n" + "="*50)
+    print("🚀 Sunbeam Guru (Production Mode) is Online!")
+    print("="*50 + "\n")
     
-    ans = get_guru_response(u_in, chat_history)
-    print(f"\nSunbeam Guru: {ans}")
-    
-    # Append the turn to history for the next iteration
-    chat_history.append(HumanMessage(content=u_in))
-    chat_history.append(AIMessage(content=ans))
-    
-    # Optional: Keep history manageable by trimming if it gets too long
-    if len(chat_history) > 10:  # Keeps last 5 turns
-        chat_history = chat_history[-10:]
+    chat_history = [] 
+
+    while True:
+        u_in = input("Student: ")
+        if u_in.lower() in ["exit", "quit"]: break
+        
+        ans = chat_with_guru(u_in, chat_history)
+        print(f"\nSunbeam Guru: {ans}\n" + "-"*30)
+        
+        chat_history.append(HumanMessage(content=u_in))
+        chat_history.append(AIMessage(content=ans))
+        if len(chat_history) > 6: chat_history = chat_history[-6:]
