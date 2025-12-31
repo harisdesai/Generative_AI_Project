@@ -84,7 +84,7 @@ def scrape_contactUS(url, output_file):
     except Exception as e:
         print(f"Error on {url}: {e}")
 
-# Run for your target URLs
+
 scrape_contactUS("https://sunbeaminfo.in/contact-us", "contact_final.json")
 
 driver.quit()

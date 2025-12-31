@@ -1,0 +1,70 @@
+import streamlit as st
+import time
+from user_ui import render_user_ui
+from admin_ui import render_admin_ui
+from neon import apply_neon_style
+
+st.set_page_config(page_title="Sunbeam Elite Portal", page_icon="💠", layout="wide")
+
+# --- AUTHENTICATION LOGIC ---
+if "logged_in" not in st.session_state:
+    st.session_state.logged_in = False
+    st.session_state.role = None
+
+def login():
+    apply_neon_style()
+    logo_left, logo_mid, logo_right = st.columns([1.43, 1, 1])
+    
+    with logo_mid:
+        # 2. Use 'width' instead of 'use_column_width'
+        # Adjust '200' to '150' if you want it even smaller
+        st.markdown('<div class="logo-container">', unsafe_allow_html=True)
+        st.image("https://sunbeaminfo.in/img/new/new_logo.png", width=200)
+        st.markdown('</div>', unsafe_allow_html=True)
+    
+    # 1. Centered Header
+    st.markdown("<h1 class='neon-glow' style='text-align: center;'>SYSTEM ACCESS</h1>", unsafe_allow_html=True)
+    
+    # 2. Create 3 columns: side columns act as spacers to "squeeze" the middle one
+    # Ratio [1, 1.2, 1] makes the center box about 40% of the screen width
+    left_spacer, center_col, right_spacer = st.columns([1, 1.2, 1])
+    
+    with center_col:
+        # Wrapping in a container for better alignment
+        with st.container():
+            with st.form("login_form"):
+                user = st.text_input("Username")
+                pw = st.text_input("Password", type="password")
+                role = st.selectbox("Role", ["User", "Admin"])
+                
+                # Aligning the button to look better in a small window
+                submit = st.form_submit_button("UNLEASH AI", use_container_width=True)
+                
+                if submit:
+                    if user == "admin" and pw == "admin123" and role == "Admin":
+                        st.session_state.logged_in, st.session_state.role = True, "Admin"
+                        st.rerun()
+                    elif user == "user" and pw == "user123" and role == "User":
+                        st.session_state.logged_in, st.session_state.role = True, "User"
+                        st.rerun()
+                    else:
+                        st.error("Invalid Credentials")
+
+if not st.session_state.logged_in:
+    # If not logged in, show the login form
+    login() 
+else:
+    # --- ADD THE ROUTING LOGIC HERE ---
+    with st.sidebar:
+        st.image("https://sunbeaminfo.in/img/new/new_logo.png", width=180)
+        st.success(f"Access Level: {st.session_state.role}")
+        if st.button("Logout"):
+            st.session_state.logged_in = False
+            st.session_state.role = None
+            st.rerun()
+
+    # This is the part you were asking about:
+    if st.session_state.role == "Admin":
+        render_admin_ui(apply_neon_style) 
+    else:
+        render_user_ui(apply_neon_style)
