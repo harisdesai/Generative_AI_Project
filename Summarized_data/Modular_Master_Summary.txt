@@ -1,0 +1,598 @@
+--- MODULAR COURSE: Apache_Spark_Mastery.json ---
+Here are the technical details for the course "Apache Spark Mastery - Data Engineering with PySpark":
+
+**Course Name:** Apache Spark Mastery - Data Engineering with PySpark
+
+**Fees:** Rs. 14900/-(Inc.18% GST)
+
+**Duration:** 50 hours
+
+**Syllabus:**
+
+* Section 1: Spark Architecture & Internals
+	+ Distributed Computing Fundamentals
+	+ RDD lineage, DAG scheduler, lazy evaluation
+	+ Cluster managers overview
+	+ Spark 4.x Updates
+	+ Performance Tuning
+		- Joins
+		- Partitioning, broadcast variables
+		- Memory management
+* Section 2: PySpark DataFrames & SQL
+	+ Data Manipulation
+		- Complex types (JSON, arrays, maps)
+		- Window functions, pivot tables, UDFs/Pandas UDFs
+	+ Spark SQL Deep Dive
+		- Temp views, catalog API, Hive metastore integration
+		- SQL syntax for Delta Lake operations
+	+ Execution Plans
+		- Reading `explain()` output
+		- Predicate pushdown, partition pruning
+* Section 3: Incremental Data Processing & Apache Kafka
+	+ Structured Streaming
+		- Event-time processing, watermarking, state management
+		- Kafka integration (source/sink)
+	+ Delta Lake Essentials
+		- ACID transactions
+		- Schema evolution
+* Section 4: Spark Optimizations
+	+ Catalyst Internals
+		- Logical vs. physical plans
+		- Custom optimization extensions
+	+ Performance Best Practices
+		- File formats (Parquet/Delta)
+		- Resource allocation (executors/cores)
+* Section 5: Databricks Lakehouse Platform
+	+ Lakehouse fundamentals
+	+ Workspace Navigation
+		- DBFS, clusters, notebooks
+	+ Delta Lake UI
+		- Viewing table history/schema
+	+ Data Governance
+		- Unity Catalog basics (no Admin tasks)
+* Section 6: Apache Kafka Fundamentals
+	+ Architecture
+		- Brokers, topics, partitions, consumer groups
+	+ Spark-Kafka Integration
+		- Structured Streaming with Kafka
+		- Job execution
+* Section 7: Spark ML Introduction
+	+ MLlib Workflow
+		- Transformers vs. estimators, pipelines
+		- Feature engineering (VectorAssembler, StringIndexer)
+	+ Model Training
+		- Regression demo (no hyperparameter tuning)
+* Section 8: Capstone Project
+	+ Pipeline implementation
+	+ Domain Examples: IoT monitoring, retail analytics
+
+--- MODULAR COURSE: Aptitude_Course_Details.json ---
+Here are the technical details for the Aptitude Course:
+
+- **Course Name:** Aptitude Course
+- **Fees:** Rs. 3400/-
+- **Duration:** 30 hours
+- **Syllabus:**
+  - English: 
+    - Nouns, Pronouns, Verbs, Adjectives, Adverbs, Prepositions, Conjuction, Articles, Tenses, Voice, Direct Indirect Speech, Idioms, Synonyms & Antonyms, Reading Comprehension
+  - Reasoning: 
+    - Analogy, Coding and Decoding, Syllogism, Blood Relations, Seating Arrangements, Puzzles, Directions, Data Sufficiency, Numerical Series, Ranking & Ordering
+  - Quantitative: 
+    - Number System, Percentage, Profit and Loss, Ratio & Proportion, Partnership, Average, Ages, Mixture & Alligation, Simple Interest & Compound Interest, Cyclicity & Remainder, Time Speed & Distance, Trains Boats & Streams, Time & Work, Wages (man Days), Pipes & Cisterns, Permutations & Combinations, Probability, Problems on Ages, Surds And Indices
+
+--- MODULAR COURSE: Core_Java.json ---
+Here are the technical details for the "Core Java" course:
+
+**Course Name:** Core Java
+
+**Fees:** Rs. 6800/- (Inc. 18% GST)
+
+**Duration:** 80 Hrs
+
+**Syllabus:**
+
+* Java Language Fundamentals:
+	+ Java language features
+	+ Overview of JDK, JRE and JVM
+	+ Data types and wrapper classes
+	+ Package, path and classpath
+	+ Arrays, Enum, jar file
+* OOPs Concept:
+	+ Class, reference, instance
+	+ Constructor chaining
+	+ Object class
+	+ Static initializer block
+	+ Association and inheritance
+	+ Polymorphism and dynamic method dispatch
+	+ Abstract class and Interface
+* Exception Handling:
+	+ Error and exception
+	+ Checked and unchecked Exception
+	+ Try-with-resource
+	+ Multi-catch block
+	+ Custom exception
+	+ Chained exceptions
+* Functional Programming Fundamentals:
+	+ Nested and local class
+	+ Anonymous inner class
+	+ Functional interface
+	+ Lambda expression
+	+ Method and constructor references
+	+ Constructor Reference
+* Generics:
+	+ Boxing/Auto-Boxing and Unboxing/Auto-Unboxing
+	+ Parameterized type
+	+ Bounded type parameter
+	+ Wild Card and its type
+	+ Generic method
+* String Handling:
+	+ Overview of UNICODE
+	+ String, StringBuffer and StringBuilder
+	+ StringTokenizer
+	+ Regular expression
+* Collection Framework:
+	+ Comparable versus Comparator
+	+ List, ArrayList, Vector
+	+ Set, TreeSet
+	+ Hashing
+	+ HashSet, Hashtable and HashMap
+	+ Java 8 Streams
+* Multithreading:
+	+ Advantages & issues of process & thread
+	+ Thread class and Runnable
+	+ Thread States, life cycle
+	+ Race condition, deadlock, monitor
+	+ Synchronization and Object class
+* File IO:
+	+ Path basics
+	+ Text file and binary file processing
+	+ Serialization and deserialization
+	+ SerialVersionUID
+* Reflection:
+	+ Metadata and its application
+	+ java.lang.Class class
+	+ Overview of reflection classes and interfaces
+	+ Dynamic method invocation
+
+--- MODULAR COURSE: data_structures_algorithms_scrap.json ---
+Here are the technical details for the course "Data Structures and Algorithms":
+
+* **Course Name:** Data Structures and Algorithms
+* **Fees:** Rs. 5900/- (Inc. 18% GST)
+* **Duration:** 60 HRS
+* **Syllabus:**
+	+ Algorithm Analysis: Time complexity, Space complexity
+	+ Linked List: Array advantages and disadvantages, Linked List concept, Linear Singly Linked List, Circular Singly Linked List, Linear and Circular Doubly Linked List, Complexity analysis of Linked List operations
+	+ Stack: Stack concept, Stack using Array, Stack using Linked List, Expression conversion & evaluation (prefix, infix and postfix), Parenthesis balancing, Complexity analysis of Stack operations
+	+ Queue: Queue concept & types, Queue using Array, Queue using Linked List, Complexity analysis of Queue operations
+	+ Sorting: Selection sort, Bubble sort, Insertion sort, Quick sort, Merge sort, Heap sort, Complexity analysis of sorting algorithms
+	+ Searching: Linear Search, Binary Search, Hashing, Complexity analysis of searching algorithms
+	+ Tree: Tree concept & types, Tree traversal (Inorder, Preorder and Postorder), Binary Search Tree (BST) implementation, BST: add node, traversal, delete node, balancing, BFS & DFS, Complexity analysis of BST algorithms
+	+ Graph: Graph concept & types, Adjacency Matrix implementation, Adjacency List implementation, Spanning Tree algorithms: Prim’s MST, Kruskal’s MST, Shortest Path algorithms: Dijkstra, Bellaman Ford, Warshal Floyd, Search algorithms: BFS, DFS, A* search, Complexity analysis of Graph algorithms
+
+--- MODULAR COURSE: dev_ops_scrap.json ---
+Here are the technical details for the "Dev Ops" course:
+
+**Course Name:** Dev Ops
+
+**Fees:** Rs. 11100/-
+
+**Duration:** 80 Hrs
+
+**Syllabus:**
+
+* Week 1: Linux
+  * Introduction to DevOps
+  * SDLC and Agile fundamentals
+  * DevOps Lifecyle
+  * Introduction to the Tools used in DevOps Lifecyle
+  * Installation and configuration using VM
+  * Booting
+  * File System
+  * Working with Text files
+  * Archiving and compressing files
+  * User and Group management
+  * File Permissions
+  * Package management
+  * Systemd management
+* Week 2: Git
+  * Foundation of VCS
+  * What is Git?
+  * Git Workflow
+  * Git Internals
+  * Demystifying branching
+  * Collaboration with GitHub
+* Week 3: Docker
+  * Virtualization
+  * Hardware virtualization vs Containerization
+  * Docker fundamentals
+  * Architecture
+  * Installation and configuration
+  * Image management
+  * Container management
+  * Docker network
+  * Persisting data with Docker volumes
+  * Container Orchestration with Docker Swarm
+* Week 4: Kubernetes
+  * Introducing Kubernetes and its features
+  * Architecture
+  * Installation of configuration of Kubernetes cluster
+  * Pod management
+  * Secrets and ConfigMaps
+  * Service and Networking
+  * State persistence with PersistentVolumes and PersistentVolumeClaims
+  * Observability
+  * Probes
+* Week 5: Jenkins
+  * Introduction to CI/CD pipeline
+  * Jenkins cluster installation and configuration
+  * Configuration of pipeline
+  * Scripted pipeline
+  * Implementing security with Jenkins
+  * Setting up notifications
+  * Using Jenkinsfile
+* Week 6: AWS
+  * Introduction to Cloud
+  * What is AWS?
+  * AWS Services
+  * Compute Services: EC2 instance, VPC, Lambda
+  * Storage Services: S3
+  * Database Services: RDS (MySQL)
+  * DevOps Services: CodeCommit, CodeBuild, CodeDeploy, X-Ray
+  * Container Services: ECS, EKS
+* Week 7: Terraform
+  * Infrastructure as a Code
+  * Installation and Configuration
+  * Terraform foundation
+  * Workflow
+  * Terraform modules
+  * Implementing and maintaining states
+  * HCP Terraform
+* Week 8: Ansible
+  * Introduction to Ansible
+  * Pull vs Push method
+  * Installation and Configuration
+  * Architecture and Design of Ansible
+  * Diving into playbooks
+  * Using Ansible with cloud
+  * Using Ansible with containers
+  * Modules and plugins
+
+--- MODULAR COURSE: dream_llm_scrap.json ---
+Here are the technical details for the course "Dream LLM":
+
+**Course Name:** Dream LLM
+
+**Fees:** Rs. 20,000/- (inclusive of 18% GST) or Rs. 12,000/- (inclusive of 18% GST)
+
+**Duration:** 5 weeks
+
+**Syllabus:**
+
+* Introduction to LLM
+	+ What is large language model?
+	+ Types of LLM
+	+ Applications of LLM
+	+ Requirements of DreamLLM
+* Mathematics and PyTorch required for LLM
+	+ Vectors
+	+ Matrices
+	+ Tensors
+	+ Linear Algebra
+	+ All maths topics with PyTorch implementation
+* Introduction to Deep Learning
+	+ Difference between ML and DL
+	+ Neural network architecture
+	+ Introduction to forward and backward propagation
+* Why should you build DreamLLM?
+	+ Strategies of building LLM
+	+ Fine tuning vs creating custom LLM
+	+ Supervised (labelled) vs unsupervised (unlabelled) training custom LLM
+	+ Architecture of DreamLLM
+* Transformers
+	+ Relationship between LLM and transformer
+	+ Introduction to transformers
+	+ Transformer architecture
+	+ Types of transformers
+* Understanding data
+	+ Data requirements to train DreamLLM
+	+ Preprocessing the data
+	+ Tokenization
+	+ Custom tokenization
+	+ Embeddings basics
+	+ Byte pair encoding
+* Processing data using sequence modelling
+	+ Introduction to RNN (LSTM and GRU)
+	+ Introduction and requirement of attention mechanism
+	+ Implementing attention mechanism
+	+ Self attention mechanism
+	+ Single head
+	+ Multi head
+* Creating LLM from scratch
+	+ Deciding the layers, activation functions
+	+ Implementing feed forward network
+	+ Generating text using custom LLM
+* Fine tuning for further tasks
+	+ Fine tuning the DreamLLM on labelled data
+	+ Fine tuning the DreamLLM on unlabelled data
+	+ Evaluation of DreamLLM
+* Deploying the DreamLLM
+	+ Use AWS cloud for deployment
+	+ Automate the deployment using AWS DevOps tools
+
+--- MODULAR COURSE: machine_learning_scrap.json ---
+Here are the technical details for the course "Machine Learning":
+
+* **Course Name:** Machine Learning
+* **Fees:** Rs. 7500/- (Inc. 18% GST)
+* **Duration:** 40 hours
+* **Syllabus:**
+	+ Introduction to Machine Learning
+		- Big picture of machine learning
+		- Why machine learning is needed?
+		- Types of machine learning
+		- Challenges of machine learning
+		- Creating machine learning pipeline
+		- End-to-end process
+	+ Regression
+		- Understanding statistical regression
+		- Performing regression with Simple linear regression, Multiple linear regression, Support vector machine
+		- Evaluating models using RMSE, MSE, MAE etc
+	+ Classification
+		- Understanding need of classification
+		- Classification vs regression
+		- Performing classification with Logistic regression, Support vector machine, Decision trees, K nearest neighbours
+		- Evaluating models using AuC and RoC etc
+	+ Ensemble Learning
+		- What is ensemble learning
+		- Need of ensemble learning
+		- Types of ensemble learning
+			- Bagging
+				- Random forest
+			- Boosting
+				- Gradient boosting
+				- Xgboost
+			- Stacking
+	+ Clustering
+		- Why clustering is needed?
+		- Performing clustering using Hierarchical clustering, K meaning clustering
+	+ Association Rule Mining
+		- Where association rule mining is needed
+		- Performing association rule mining using Apriori
+	+ Dimensionality Reduction
+		- Introduction to feature extraction
+		- What is dimensionality reduction?
+		- Performing dimensionality reduction using PCA
+	+ Introduction to Deep Learning
+		- What is deep learning?
+		- Introduction to artificial networking
+		- Introduction to TensorFlow and Keras
+		- Introduction MLPs with Keras
+	+ Convolutional Neural Network
+		- Deep computer vision using CNN
+		- Introduction to images and convolutions
+		- CNN architecture
+		- Image classification using CNN
+		- Object detection using CNN
+	+ Recurrent Neural Network
+		- Introduction to RNN
+		- Processing sequences using RNN
+		- Training RNN
+		- Forecasting time series using TensorFlow
+		- Natural language processing using RNN
+	+ Representation Learning and GANs
+		- Introduction to autoencoders
+		- Stacked autoencoders
+		- Introduction to GAN
+	+ Reinforcement Learning
+		- Introduction to reinforcement learning
+		- Introduction to OpenAI gym
+		- Q-learning
+		- Deep Q-Learning
+	+ Deploying model on cloud (AWS)
+		- Saving models
+		- Serving TensorFlow model
+
+--- MODULAR COURSE: mastering_gen_ai_scrap.json ---
+Here are the technical details for the course "Mastering Generative AI":
+
+**Course Name:** Mastering Generative AI
+
+**Fees:** Rs. 17900/-
+
+**Duration:** 60 Hrs
+
+**Syllabus:**
+
+* Mastering AI Basics
+	+ Overview of Statistics
+	+ Sampling
+	+ Descriptive Statistics
+	+ Probability
+	+ Distributions
+	+ Hypothesis Testing
+	+ Correlation Analysis
+	+ Time Series Analysis
+	+ Data Visualization
+	+ Data Preprocessing
+* Introduction to Machine Learning
+	+ Overview of machine learning
+	+ Types of machine learning
+	+ Applications of machine learning
+	+ Challenges and limitations of machine learning
+* Regression Analysis
+	+ Overview of regression analysis
+	+ Algorithms for regression
+	+ Assumptions of regression analysis
+	+ Model evaluation metrics
+	+ Model interpretation and communication of results
+* Classification
+	+ Overview of classification
+	+ Types of classification
+	+ Evaluation metrics for classification
+	+ Algorithms for classification
+	+ Ensemble methods
+	+ Hyperparameter tuning and model selection
+* Clustering
+	+ Overview of clustering
+	+ Types of clustering
+	+ Evaluation metrics for clustering
+* Dimensionality Reduction
+	+ Overview of dimensionality reduction
+	+ Techniques for dimensionality reduction
+* Mastering-AI-Advance
+	+ Introduction to Deep Learning
+		- Overview of deep learning
+		- Differences between traditional machine learning and deep learning
+		- Applications of deep learning in various domains
+		- Challenges and limitations of deep learning
+		- Overview of generative AI
+		- Applications of generative AI in various domains
+		- Challenges and limitations of generative AI
+	+ Deep Learning Frameworks
+		- Overview of popular deep learning frameworks
+		- Overview of generative AI frameworks
+		- Setting up the environment
+	+ Artificial Neural Networks (ANNs)
+		- Feedforward neural networks
+		- Perceptrons
+		- Multi-layer perceptrons (MLPs)
+		- Activation functions
+		- Loss functions
+		- Regression and classification using ANNs
+	+ Convolutional Neural Networks (CNNs)
+		- Overview of CNNs and their architecture
+		- Convolutional layers and filters
+		- Pooling layers
+		- Flattening and fully connected layers
+	+ Recurrent Neural Networks (RNNs)
+		- Overview of RNNs and their architecture
+		- ANN vs CNN vs RNN
+		- Long Short-Term Memory (LSTM) networks
+		- Gated Recurrent Units (GRUs)
+	+ Generative Adversarial Networks (GANs)
+		- Overview of GANs and their architecture
+		- Generator and discriminator networks
+		- Training GANs and challenges
+	+ Transfer Learning
+		- Overview of transfer learning
+		- Fine-tuning pre-trained models
+	+ Natural Language Processing (NLP)
+		- Overview of NLP and its applications
+		- Text preprocessing techniques
+		- Word embeddings
+		- Sequence-to-sequence models
+		- Attention mechanisms in NLP
+	+ Large Language Models (LLMs)
+		- Overview of LLMs and their architecture
+		- Transformer architecture
+		- Attention mechanisms
+		- Pre-training and fine-tuning LLMs
+	+ Retrieval-Augmented Generation (RAG)
+		- Overview of RAG
+		- How RAG works
+		- Applications of RAG in natural language processing
+	+ Agentic RAG
+		- Overview of agentic RAG
+		- How agentic RAG works
+		- Applications of agentic RAG in natural language processing
+	+ Fine tuning LLMs
+		- Overview of fine-tuning LLMs
+		- How to fine-tune LLMs
+		- Applications of fine-tuning LLMs in natural language processing
+
+--- MODULAR COURSE: mastering_mcqs_scrap.json ---
+Here are the technical details for the course "Mastering MCQs":
+
+* **Course Name**: Mastering MCQs
+* **Fees**: Rs. 3000/-
+* **Duration**: 1 Month
+* **Syllabus Modules**:
+  * Aptitude
+  * Reasoning
+  * English
+  * Computer Fundamentals & Concepts of Programming
+  * C Programming
+  * C++
+  * Data Structure
+  * Operating Systems
+  * Data Communication Networking
+  * Big Data, Al
+  * Computer Architecture
+  * Digital Electronics
+  * Microprocessors
+
+--- MODULAR COURSE: mern_full_stack_scrap.json ---
+Here are the technical details for the MERN Full Stack Development course:
+
+**Course Name:** MERN (Full Stack) Development
+
+**Fees:** Rs. 9100/-
+
+**Duration:** 40 hours
+
+**Syllabus:**
+
+* **Node:**
+	+ Introduction to Node
+	+ Environment setup
+	+ Basics (npm, package.json, importing modules, command line arguments, async vs sync, threading model)
+	+ Microservices (introduction, developing using JS, configuration, deployment)
+	+ Http (creating web server, calling REST APIs)
+	+ Express (introduction, creating new project, routes and router, middleware, connecting to database, authentication)
+	+ Node modules (file system, buffer, express, crypto-js, multer, mysql2, postgres, moment, passport, morgan)
+* **React:**
+	+ Setting up environment (installing nodejs, babel, webpack)
+	+ Introduction to SPA (single page architecture, pros and cons, other frameworks)
+	+ React fundamentals (components, component oriented architecture, environment setup, build workflow)
+	+ React basics (hello world app, functional component, dynamic output, component lifecycle, debugging, props, styling)
+	+ Introduction to state management (rules, initializing state, updating state, app lifecycle, handling errors)
+	+ Introduction to Redux (why Redux, pros and cons, architecture, actions, store, reducers)
+	+ Advanced Redux concepts and integration (connecting React to Redux, mapStateToProps, mapDispatchToProps, async in Redux, async status and error handling)
+	+ Basic and advanced Routing (introduction, root level routing, child level routing)
+	+ React hooks (what is hook, rules, using state hook, using effect hook, building custom hook)
+	+ Handling online payment (connecting React with online payment gateway)
+	+ Testing React components (testing overview, setting up environment, testing React components)
+* **Pre-requisites:**
+	+ Object Oriented Programming Concepts
+	+ Any RDBMS (SQL)
+	+ Web Programming Fundamentals (HTML, CSS, JS)
+
+--- MODULAR COURSE: mlops_llmops_scrap.json ---
+Here are the technical details for the course "MLOps & LLMOps":
+
+* **Course Name**: MLOps & LLMOps
+* **Fees**: Rs. 8000/- (Special Offer for Sunbeam Alumni: Rs. 5900)
+* **Duration**: 2 weeks
+* **Syllabus**:
+  * Experiment Tracking: MLFlow, Weights and Biases
+  * Data and model versioning: dvc and LakeFS
+  * Containerization of models: Docker
+  * MLOps Pipeline: KubeFlow and MLFlow
+  * Model serving: KServe, Tensorflow Serving
+  * CI/CD for MLOps: Jenkins and GitHub Actions
+  * Observability: ELK
+  * Monitoring: Prometheus and Grafana
+
+--- MODULAR COURSE: python_development_scrap.json ---
+Here are the technical details for the course "Python Development":
+
+* **Course Name**: Python Development
+* **Fees**: Rs. 6800/-
+* **Duration**: 50 hours
+* **Syllabus**:
+  * Python Fundamentals and Environment Setup
+  * Core Python Syntax and Data Types
+  * Control Flow and Decision Making
+  * Python Data Structures
+  * Strings and Text Processing
+  * Functions and Modular Programming
+  * Object-Oriented Programming in Python
+  * Error Handling and Debugging
+  * File Handling and Data Input Output
+  * Working with Dates, Time and Utilities
+  * Python Standard Library Overview
+  * Introduction to Data Handling for Machine Learning
+  * Python for Backend Development Foundations
+  * Database connectivity
+  * Mini Project

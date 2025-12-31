@@ -1,0 +1,27 @@
+**COURSE OVERVIEW:**
+This course is a Pre-CAT (Common Admission Test) preparation course designed to help students prepare for entrance exams. The primary goal of this course is to equip students with the necessary skills and knowledge to excel in the CAT exam.
+
+**KEY DATA EXTRACTION:**
+
+* **Official Course Name:** PREPARATORY COURSE FOR ENTRANCE EXAM
+* **Exact Fees:**
+  * Batch Code: PM-48 - Rs. 17600/-
+  * Batch Code: OM-66 - Rs. 15500/-
+  * Batch Code: PH-39 - Rs. 17600/-
+* **Course Duration and Timings:**
+  * Batch Code: PM-48 - 160 Hrs, 16-Feb-2026 to 14-Apr-2026, 9:00 AM to 1:00 PM
+  * Batch Code: OM-66 - 160 Hrs, 25-Feb-2026 to 16-May-2026, 2:00 PM to 6:00 PM
+  * Batch Code: PH-39 - 160 Hrs, 09-Mar-2026 to 05-May-2026, 9:00 AM to 1:00 PM
+* **Technical Syllabus (Grouped into logical modules):**
+  * General Aptitude (Quantitative Aptitude, Reasoning and English)
+  * Computer Fundamentals & Concepts of Programming
+  * C Programming
+  * Data Structure
+  * Object Oriented Programming Concepts Using C++
+  * Operating Systems & Networking
+  * Basics of Big Data & Artificial Intelligence
+  * Computer Architecture
+  * Digital Electronics
+  * Microprocessor
+* **Target Audience and Prerequisites:**
+  * Eligibility Criteria: Students who are eligible for Full-time PG Courses are eligible for Pre-CAT courses.
