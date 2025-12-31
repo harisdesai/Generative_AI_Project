@@ -2,7 +2,7 @@ import streamlit as st
 import time
 from user_ui import render_user_ui
 from admin_ui import render_admin_ui
-from neon import apply_neon_style
+from neon import style_func
 
 st.set_page_config(page_title="Sunbeam Elite Portal", page_icon="💠", layout="wide")
 
@@ -12,7 +12,7 @@ if "logged_in" not in st.session_state:
     st.session_state.role = None
 
 def login():
-    apply_neon_style()
+    style_func()
     logo_left, logo_mid, logo_right = st.columns([1.43, 1, 1])
     
     with logo_mid:
@@ -54,17 +54,8 @@ if not st.session_state.logged_in:
     # If not logged in, show the login form
     login() 
 else:
-    # --- ADD THE ROUTING LOGIC HERE ---
-    with st.sidebar:
-        st.image("https://sunbeaminfo.in/img/new/new_logo.png", width=180)
-        st.success(f"Access Level: {st.session_state.role}")
-        if st.button("Logout"):
-            st.session_state.logged_in = False
-            st.session_state.role = None
-            st.rerun()
-
-    # This is the part you were asking about:
+    # If logged in, show the appropriate UI based on role
     if st.session_state.role == "Admin":
-        render_admin_ui(apply_neon_style) 
+        render_admin_ui(style_func) 
     else:
-        render_user_ui(apply_neon_style)
+        render_user_ui(style_func)
