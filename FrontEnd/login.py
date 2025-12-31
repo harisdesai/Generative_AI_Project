@@ -2,7 +2,7 @@ import streamlit as st
 import time
 from user_ui import render_user_ui
 from admin_ui import render_admin_ui
-from neon import style_func
+from Css import style_func, local_css
 
 st.set_page_config(page_title="Sunbeam Elite Portal", page_icon="💠", layout="wide")
 
@@ -58,4 +58,4 @@ else:
     if st.session_state.role == "Admin":
         render_admin_ui(style_func) 
     else:
-        render_user_ui()
+        render_user_ui(local_css)
