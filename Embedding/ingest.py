@@ -3,72 +3,74 @@ import json
 from langchain_chroma import Chroma
 from langchain_text_splitters import RecursiveJsonSplitter
 from langchain_core.documents import Document
-import embedding # Uses your updated file with prefixes
+import embedding # Ensure this is your updated embedding.py with Nomic prefixes
 
-# 1. SETUP PATHS
+# --- 1. SETUP PATHS ---
 script_dir = os.path.dirname(os.path.abspath(__file__))
-# Points to your Scraped_data folder one level up
+# Adjust this path to point to your 'Scraped_data' folder
 base_data_path = os.path.abspath(os.path.join(script_dir, "..", "Scraped_data"))
 DB_DIR = "./knowledgebase"
 
-# 2. INITIALIZE THE SPLITTER
-# max_chunk_size=500 keeps batch info, fees, and syllabus items together
+# --- 2. INITIALIZE THE SPLITTER ---
+# max_chunk_size=500 is ideal for keeping JSON key-value pairs together
 json_splitter = RecursiveJsonSplitter(max_chunk_size=500)
 
-print(f"Scanning for data in: {base_data_path}")
+print(f"🚀 Scanning for Sunbeam data in: {base_data_path}")
 
 all_documents = []
 
-# 3. RECURSIVELY FIND AND CHUNK JSON FILES
+# --- 3. RECURSIVELY PROCESS FILES WITH METADATA ---
 for root, dirs, files in os.walk(base_data_path):
     for file in files:
         if file.endswith(".json"):
             full_file_path = os.path.join(root, file)
-            # relative_id is used for metadata (e.g., 'Internship/mern.json')
+            
+            # relative_id: e.g., 'Internship_Scrap/sunbeam_internship_full.json'
             relative_id = os.path.relpath(full_file_path, base_data_path)
+            
+            # CATEGORY EXTRACTION: Extracts the folder name (e.g., 'Modular_courses')
+            # This is critical for Agentic RAG filtering
+            category = relative_id.split(os.sep)[0] 
 
             try:
                 with open(full_file_path, "r", encoding="utf-8") as f:
                     data = json.load(f)
 
-                # Split the JSON into meaningful smaller chunks
+                # Split the JSON into smaller, manageable chunks
                 chunks = json_splitter.split_json(json_data=data)
                 
-                # Convert chunks into LangChain Documents
                 for i, chunk in enumerate(chunks):
-                    # CONVERT JSON CHUNK TO STRING
+                    # Convert JSON chunk to string and apply Nomic storage prefix
                     chunk_text = json.dumps(chunk)
-                    
-                    # APPLY NOMIC PREFIX FROM YOUR EMBEDDING FILE
-                    # This tells the model: "This is a document to be searched later"
                     prefixed_text = embedding.embed_for_storage(chunk_text)
                     
+                    # Create Document with enriched metadata
                     doc = Document(
                         page_content=prefixed_text,
                         metadata={
                             "source": relative_id,
+                            "category": category, # The 'Map' for your Agent
                             "chunk_index": i
                         }
                     )
                     all_documents.append(doc)
                 
-                print(f"Chunked: {relative_id} ({len(chunks)} chunks)")
+                print(f"✅ Chunked: {relative_id} | Category: {category} ({len(chunks)} chunks)")
 
             except Exception as e:
-                print(f"Error processing {relative_id}: {e}")
+                print(f"❌ Error processing {relative_id}: {e}")
 
-# 4. STORE IN CHROMADB
+# --- 4. STORE IN CHROMADB ---
 if all_documents:
-    print(f"\nStoring {len(all_documents)} chunks in ChromaDB...")
+    print(f"\n📦 Storing {len(all_documents)} chunks in ChromaDB...")
     
-    # We pass your embed_model object. 
-    # Chroma will automatically call its embed_documents method on our prefixed text.
+    # This automatically embeds and saves the documents to disk
     vectorstore = Chroma.from_documents(
         documents=all_documents,
         embedding=embedding.embed_model,
         persist_directory=DB_DIR,
         collection_name="sunbeam_data"
     )
-    print("Ingestion complete! The database is optimized with Nomic prefixes.")
+    print("✨ Ingestion complete! Your Agent can now use 'category' filters.")
 else:
-    print("No valid JSON files found. Check your 'Scraped_data' folder.")
+    print("⚠️ No valid JSON files found. Check your 'Scraped_data' folder structure.")
