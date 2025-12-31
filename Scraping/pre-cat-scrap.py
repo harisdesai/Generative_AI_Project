@@ -10,7 +10,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 
 # 1. Setup Browser Options
 options = Options()
-# options.add_argument("--headless") # Uncomment to run without opening a window
+options.add_argument("--headless")
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 
 def scrape_sunbeam_page(url):
@@ -25,12 +25,10 @@ def scrape_sunbeam_page(url):
     }
 
     try:
-        # A. Extract Static Top Content (Course Name, Fees, etc.)
-        # Based on your image, capturing the course title and basic info
+        # 2. Extract General Info (Course Title)
         full_data["general_info"]["course_title"] = driver.find_element(By.TAG_NAME, "h3").text
         
-        # B. Handle Accordion Sections (Course Contents, Eligibility, Schedule)
-        # Find all clickable headers (panel-heading class from your DevTools image)
+        # 3. Handle Accordion Sections
         headers = wait.until(EC.presence_of_all_elements_located((By.CLASS_NAME, "panel-heading")))
         
         for i in range(len(headers)):
@@ -79,7 +77,7 @@ def scrape_sunbeam_page(url):
             full_data["accordion_sections"].append(section_data)
             print(f"Scraped section: {section_title}")
 
-        # 3. Save the final object to JSON
+        # Save the final object to JSON
         with open("Pre-CAT.json", "w", encoding="utf-8") as f:
             json.dump(full_data, f, indent=4, ensure_ascii=False)
         print("\nSuccess! Data saved to Pre-CAT.json")
