@@ -215,8 +215,4 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
-
-venv_a/
-venv_b/
-
 knowledgebase/
