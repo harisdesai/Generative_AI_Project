@@ -1,0 +1,23 @@
+**COURSE OVERVIEW:**
+The Mastering MCQs course is designed to help students master multiple-choice questions (MCQs) and prepare for competitive exams and interviews. The primary goal of this course is to equip students with the necessary skills and knowledge to tackle MCQs effectively.
+
+**KEY DATA EXTRACTION:**
+
+* **Official Course Name:** Mastering MCQs
+* **Exact Fees:** Rs. 3000/-
+* **Course Duration and Timings:** 1 Month, Monday to Friday, 11:00 AM to 12:30 PM
+* **Technical Syllabus:**
+	+ Aptitude
+	+ Reasoning
+	+ English
+	+ Computer Fundamentals & Concepts of Programming
+	+ C Programming
+	+ C++
+	+ Data Structure
+	+ Operating Systems
+	+ Data Communication Networking
+	+ Big Data, Al
+	+ Computer Architecture
+	+ Digital Electronics
+	+ Microprocessors
+* **Target Audience and Prerequisites:** Students, Fresher's (No specific prerequisites mentioned)

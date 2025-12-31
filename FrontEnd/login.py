@@ -58,4 +58,4 @@ else:
     if st.session_state.role == "Admin":
         render_admin_ui(style_func) 
     else:
-        render_user_ui(style_func)
+        render_user_ui()

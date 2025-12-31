@@ -1,0 +1,40 @@
+**COURSE OVERVIEW:**
+The Sunbeam Internship Program is a comprehensive training and internship program designed to provide students with practical experience in various fields, including technology, computer science, and electronics. The primary goal of this program is to equip students with valuable skills, industry exposure, and a network of professionals and peers in their specific field.
+
+**KEY DATA EXTRACTION:**
+
+* **Official Course Name:** Internship Program
+* **Exact Fees:** The fees for the internship program are Rs. 4000/- per month for a duration of 1 month.
+* **Course Duration and Timings:** The course duration varies from 1 month to 6 months, with timings from 8:00 AM to 4:00 PM.
+* **Technical Syllabus (Grouped into logical modules):**
+	+ Generative AI: Create intelligent applications with LLMs.
+		- Prerequisite: Python, Database
+		- Learning: Advanced Python, LLM models, Ollama, LangChain, Streamlit, Prompt engineering, HuggingFaces
+	+ Android Mobile App Development: Develop Android Mobile Application
+		- Prerequisite: Java Programming, Database, JS
+		- Learning: Android Programming (Java), Express JS server
+	+ C Programming: System application development with GUI
+		- Prerequisite: Basic C Programming
+		- Learning: Revision of structs and File IO, System programming, GUI programming in C
+	+ Java Programming: Desktop application development with GUI
+		- Prerequisite: Basic Java Programming
+		- Learning: Revision of Collections and File IO, GUI programming in Java
+	+ Web Programming: Web Application Development
+		- Prerequisite: HTML, JS, CSS, SQL basics
+		- Learning: Node JS, REST services using Express, jQuery, Advanced SQL
+	+ Python Web Development: Python-based Web Application Development
+		- Prerequisite: Python, HTML, JS, CSS, SQL basics
+		- Learning: Python Flask/Database connectivity, REST services, jQuery, Advanced SQL
+	+ Data Science (ML): Exploring & Visualizing data and Machine learning using Python.
+		- Prerequisite: Python Programming
+		- Learning: Advanced Python, ML models, Power BI, Flask
+	+ .NET: Web application development using .NET
+		- Prerequisite: C#
+		- Learning: Cortex-M embedded programming
+	+ CYBER SECURITY: Build and manage secure IT infrastructure.
+		- Prerequisite: Networking & Linux Basics
+		- Learning: Configure essential network services, implement firewall solutions, secure web servers with certificates, deploy intrusion detection systems, and work with virtualized environments
+	+ ARM Micro-controller: Develop ARM Cortex-M firmware with embedded communication protocols and sensor interfacing
+		- Prerequisite: C Programming, Basic electronics
+		- Learning: Advanced Python, LLM models, Ollama, LangChain, Streamlit, Prompt engineering, HuggingFaces
+* **Target Audience and Prerequisites:** The target audience for this program is students, and the prerequisites vary depending on the technology chosen.
