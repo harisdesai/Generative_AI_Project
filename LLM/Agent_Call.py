@@ -102,11 +102,27 @@ def search_sunbeam_info(query: str) -> str:
 tools = [list_all_offerings, search_course_details, search_sunbeam_info]
 
 # --- 3. INITIALIZE LLM ---
+# llm = init_chat_model(
+#     model="llama-3.3-70b-versatile",
+#     model_provider="openai",
+#     base_url="https://api.groq.com/openai/v1",
+#     api_key=os.getenv("groq_api_key"),
+#     temperature=0
+# )
+
+# llm = init_chat_model(
+#     model="llama-3.1-8b-instant",
+#     model_provider="openai",
+#     base_url="https://api.groq.com/openai/v1",
+#     api_key=os.getenv("groq_api_key"),
+#     temperature=0
+# )
+
 llm = init_chat_model(
-    model="llama-3.3-70b-versatile",
+    model="google/gemma-3-4b",
     model_provider="openai",
-    base_url="https://api.groq.com/openai/v1",
-    api_key=os.getenv("groq_api_key"),
+    base_url="http://127.0.0.1:1234/v1",
+    api_key= "no-needed",
     temperature=0
 )
 
