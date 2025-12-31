@@ -52,10 +52,10 @@ for root, dirs, files in os.walk(base_data_path):
                     )
                     all_documents.append(doc)
                 
-                print(f"✅ Chunked: {relative_id} ({len(chunks)} chunks)")
+                print(f"Chunked: {relative_id} ({len(chunks)} chunks)")
 
             except Exception as e:
-                print(f"❌ Error processing {relative_id}: {e}")
+                print(f"Error processing {relative_id}: {e}")
 
 # 4. STORE IN CHROMADB
 if all_documents:
@@ -69,6 +69,6 @@ if all_documents:
         persist_directory=DB_DIR,
         collection_name="sunbeam_data"
     )
-    print("🚀 Ingestion complete! The database is optimized with Nomic prefixes.")
+    print("Ingestion complete! The database is optimized with Nomic prefixes.")
 else:
-    print("⚠️ No valid JSON files found. Check your 'Scraped_data' folder.")
+    print("No valid JSON files found. Check your 'Scraped_data' folder.")
