@@ -2,6 +2,8 @@ import os
 import json
 import chromadb
 import embedding # Uses your local embedding model
+# Use the new v1.0 import path
+from langchain_chroma import Chroma
 
 # 1. DYNAMIC PATH SETUP: Works on any PC
 script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -61,3 +63,13 @@ for root, dirs, files in os.walk(base_data_path):
             store_db(full_file_path, relative_id)
 
 print("\nIngestion complete. The database is now shared-ready.")
+
+def search_resume(job_description, top_k):
+    # Use the same model object here as well
+    query_vector = embedding.embed_model.embed_query(job_description)
+    search_results = collection.query(
+        query_embeddings=[query_vector],
+        n_results=top_k,
+        include=["documents", "metadatas", "distances"]
+    )
+    return search_results
