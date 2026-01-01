@@ -1,11 +1,11 @@
-from langchain.tools.retriever import create_retriever_tool
+from langchain.tools import create_retriever_tool
 from langchain_chroma import Chroma
 import embedding # Your existing embedding file
 
 # 1. Connect to the database you just created
 vectorstore = Chroma(
     persist_directory="./knowledgebase",
-    embedding_function=embed_model, 
+    embedding_function= embedding.embed_model, 
     collection_name="sunbeam_data"
 )
 

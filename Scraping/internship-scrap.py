@@ -95,4 +95,4 @@ def scrape_full_internship_data(url, output_filename):
         driver.quit()
 
 if __name__ == "__main__":
-    scrape_full_internship_data("https://sunbeaminfo.in/internship", "sunbeam_internship_full.json")
+    scrape_full_internship_data("https://sunbeaminfo.in/internship", "Scraped_data/aboutUS/sunbeam_internship_full.json")

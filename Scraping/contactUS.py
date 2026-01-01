@@ -85,6 +85,6 @@ def scrape_contactUS(url, output_file):
         print(f"Error on {url}: {e}")
 
 
-scrape_contactUS("https://sunbeaminfo.in/contact-us", "contact_final.json")
+scrape_contactUS("https://sunbeaminfo.in/contact-us", "Scraped_data/aboutUS/contact_final.json")
 
 driver.quit()
