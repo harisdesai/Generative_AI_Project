@@ -79,7 +79,7 @@ try:
                 continue
 
     # 4. Save the Final JSON
-    with open("Mastering_MCQ.json", "w", encoding="utf-8") as f:
+    with open("Scraped_data/Mastering_mcqs/Mastering_MCQ.json", "w", encoding="utf-8") as f:
         json.dump(full_course_data, f, indent=4, ensure_ascii=False)
         
     print("\nSuccess! Complete data saved to Mastering_MCQ.json")

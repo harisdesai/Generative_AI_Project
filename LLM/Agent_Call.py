@@ -14,7 +14,7 @@ load_dotenv()
 script_dir = os.path.dirname(os.path.abspath(__file__))
 DB_DIR = os.path.abspath(os.path.join(script_dir, "..", "Embedding", "knowledgebase"))
 
-print(f"📂 Attempting to connect to database at: {DB_DIR}")
+print(f"Attempting to connect to database at: {DB_DIR}")
 
 vectorstore = Chroma(
     persist_directory=DB_DIR,
@@ -25,9 +25,9 @@ vectorstore = Chroma(
 # Debugging: Quick check of document count
 try:
     count = vectorstore._collection.count()
-    print(f"📊 Database Status: SUCCESS! {count} documents found.")
+    print(f" Database Status: SUCCESS! {count} documents found.")
 except Exception as e:
-    print(f"❌ Database Status: Error connecting to collection - {e}")
+    print(f" Database Status: Error connecting to collection - {e}")
 
 # --- 2. DEFINE SPECIALIZED TOOLS ---
 
@@ -38,7 +38,7 @@ def list_all_offerings(category_type: Optional[str] = None) -> str:
     Args:
         category_type: Optional filter. Use 'modular_split' for Modular courses or 'summary_file' for individual summaries.
     """
-    print(f"📋 [Tool] Listing all offerings for type: {category_type}")
+    print(f" [Tool] Listing all offerings for type: {category_type}")
     
     # We fetch more documents here (k=20) because listing requires high recall
     # We use metadata filtering if the agent provides a type
@@ -60,7 +60,7 @@ def search_course_details(query: str, specific_category: Optional[str] = None) -
         query: The search term.
         specific_category: Optional category name if the user mentioned a specific course (e.g., 'Core Java').
     """
-    print(f"🔍 [Tool] Searching Course: '{query}' in Category: {specific_category}")
+    print(f" [Tool] Searching Course: '{query}' in Category: {specific_category}")
     
     # If a specific category is known, we filter by it to be 100% accurate
     search_filter = {"category": specific_category} if specific_category else None
@@ -86,7 +86,7 @@ def search_course_details(query: str, specific_category: Optional[str] = None) -
 @tool
 def search_sunbeam_info(query: str) -> str:
     """Search for general info: Address, Contacts, About Us, and Internships."""
-    print(f"🔍 [Tool] Searching General Info: '{query}'")
+    print(f"[Tool] Searching General Info: '{query}'")
     results = vectorstore.similarity_search(query, k=6)
     
     if not results:
@@ -118,11 +118,19 @@ tools = [list_all_offerings, search_course_details, search_sunbeam_info]
 #     temperature=0
 # )
 
+# llm = init_chat_model(
+#     model="google/gemma-3-4b",
+#     model_provider="openai",
+#     base_url="http://127.0.0.1:1234/v1",
+#     api_key= "no-needed",
+#     temperature=0
+# )
+
 llm = init_chat_model(
-    model="google/gemma-3-4b",
-    model_provider="openai",
-    base_url="http://127.0.0.1:1234/v1",
-    api_key= "no-needed",
+    model="llama-3.3-70b-versatile",
+    model_provider= "openai",
+    base_url = "https://api.groq.com/openai/v1",
+    api_key = os.getenv("groq_api_key"),
     temperature=0
 )
 
@@ -138,6 +146,9 @@ SYSTEM_PROMPT = (
     "- If a user asks a conceptual question (e.g., 'What is a Lambda in Java?'), answer directly using your own knowledge.\n"
     "- For all Sunbeam-specific facts (fees, syllabus, address), you MUST use tools.\n"
     "- Refuse non-academic/non-Sunbeam queries politely."
+    " - never use any tool that is not listed in your toolset.\n"
+    " - never give imaginary answers. those which are not supported by the data in the knowledge base.\n"
+    " - always give answers in proper format and readable manner.\n"
 )
 
 # --- 5. CREATE THE AGENT ---
@@ -152,7 +163,7 @@ def chat_with_guru(user_input: str, history: List):
                   "contact", "phone", "internship", "cat", "pre-cat", "course"]
     
     if any(word in user_query for word in needs_data):
-        print(f"🤖 [Agent] Routing to Tool Path: '{user_input}'")
+        print(f"[Agent] Routing to Tool Path: '{user_input}'")
         clean_history = []
         for msg in history:
             if isinstance(msg, (HumanMessage, AIMessage)):
@@ -166,7 +177,7 @@ def chat_with_guru(user_input: str, history: List):
             response = agent.invoke(input_data)
             return response["messages"][-1].content
         except Exception as e:
-            print(f"❗ [Agent] Error: {e}")
+            print(f"[Agent] Error: {e}")
             fallback_res = vectorstore.similarity_search(user_input, k=5)
             context = "\n\n".join([f"[{d.metadata.get('category')}]: {d.page_content}" for d in fallback_res])
             messages = [
@@ -176,14 +187,14 @@ def chat_with_guru(user_input: str, history: List):
             return llm.invoke(messages).content
 
     # Greetings / Small Talk / Conceptual Q&A
-    print(f"💬 [Agent] Routing to Direct Chat Path.")
+    print(f"[Agent] Routing to Direct Chat Path.")
     messages = [SystemMessage(content=SYSTEM_PROMPT)] + history + [HumanMessage(content=user_input)]
     return llm.invoke(messages).content
 
 # --- 7. RUNTIME ---
 if __name__ == "__main__":
     print("\n" + "="*50)
-    print("🚀 Sunbeam Guru (Production Mode) is Online!")
+    print("Sunbeam Guru (Production Mode) is Online!")
     print("="*50 + "\n")
     
     chat_history = [] 
