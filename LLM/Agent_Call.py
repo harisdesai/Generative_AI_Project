@@ -81,7 +81,7 @@ def search_course_details(query: str, specific_category: Optional[str] = None) -
         cat = d.metadata.get('category', 'General')
         formatted_results.append(f"--- SOURCE: {cat} ---\n{d.page_content}")
     
-    return "\n\n".join(formatted_results)
+    return "\n\n".join(formatted_results[0:4])
 
 @tool
 def search_sunbeam_info(query: str) -> str:
@@ -97,18 +97,18 @@ def search_sunbeam_info(query: str) -> str:
         cat = d.metadata.get('category', 'General')
         formatted_results.append(f"--- SOURCE: {cat} ---\n{d.page_content}")
     
-    return "\n\n".join(formatted_results)
+    return "\n\n".join(formatted_results[0:5])  # Limit to top 5 results
 
 tools = [list_all_offerings, search_course_details, search_sunbeam_info]
 
 # --- 3. INITIALIZE LLM ---
-llm = init_chat_model(
-    model="llama-3.3-70b-versatile",
-    model_provider="openai",
-    base_url="https://api.groq.com/openai/v1",
-    api_key=os.getenv("groq_api_key"),
-    temperature=0
-)
+# llm = init_chat_model(
+#     model="llama-3.3-70b-versatile",
+#     model_provider="openai",
+#     base_url="https://api.groq.com/openai/v1",
+#     api_key=os.getenv("groq_api_key"),
+#     temperature=0
+# )
 
 # llm = init_chat_model(
 #     model="llama-3.1-8b-instant",
@@ -118,29 +118,22 @@ llm = init_chat_model(
 #     temperature=0
 # )
 
-# llm = init_chat_model(
-#     model="google/gemma-3-4b",
-#     model_provider="openai",
-#     base_url="http://127.0.0.1:1234/v1",
-#     api_key= "no-needed",
-#     temperature=0
-# )
-
-# llm = init_chat_model(
-#     model="google/gemma-3-4b",
-#     model_provider="openai",
-#     base_url="http://127.0.0.1:1234/v1",
-#     api_key= "no-needed",
-#     temperature=0
-# )
-
 llm = init_chat_model(
-    model="llama-3.3-70b-versatile",
-    model_provider= "openai",
-    base_url = "https://api.groq.com/openai/v1",
-    api_key = os.getenv("groq_api_key"),
+    model="google/gemma-3-4b",
+    model_provider="openai",
+    base_url="http://127.0.0.1:1234/v1",
+    api_key= "no-needed",
     temperature=0
 )
+
+
+# llm = init_chat_model(
+#     model="llama-3.3-70b-versatile",
+#     model_provider= "openai",
+#     base_url = "https://api.groq.com/openai/v1",
+#     api_key = os.getenv("groq_api_key"),
+#     temperature=0
+# )
 
 # --- 4. THE GURU SYSTEM PROMPT ---
 SYSTEM_PROMPT = (
