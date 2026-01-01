@@ -12,11 +12,9 @@ from Css import local_css
 # --- 1. SYSTEM PATH CONFIGURATION ---
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-# Assuming your updated 'agent.py' is renamed to 'Agent_Call.py' inside the LLM folder
 try:
     from LLM.Agent_Call import chat_with_guru
 except ImportError:
-    # Fallback for local testing if folder structure differs
     def chat_with_guru(query, history):
         return "Backend not connected. Please ensure LLM/Agent_Call.py exists."
 
@@ -24,11 +22,10 @@ load_dotenv()
 
 # --- 2. STREAMLIT PAGE CONFIG ---
 st.set_page_config(
-    page_title="Sunbeam Guru | Academic Assistant",
+    page_title="Sunbeam ChatBot | Academic Assistant",
     page_icon="🎓",
     layout="wide"
 )
-
 
 
 # --- 4. DATA PERSISTENCE & STATE ---
@@ -113,7 +110,7 @@ def render_user_ui(local_css):
         st.info("Please select or create a chat session.")
         return
 
-    st.markdown(f"<h1 class='main-header' style='text-align: center;'>Sunbeam Guru</h1>", unsafe_allow_html=True)
+    st.markdown(f"<h1 class='main-header' style='text-align: center;'>Sunbeam ChatBot</h1>", unsafe_allow_html=True)
     st.markdown(f"<p style='text-align: center; color: #64748b; font-size: 0.9rem;'>Active Session: {active_chat['title']}</p>", unsafe_allow_html=True)
     st.divider()
 
@@ -121,8 +118,6 @@ def render_user_ui(local_css):
     for msg in active_chat["messages"]:
         css_class = "user" if msg["role"] == "user" else "assistant"
         icon_url = user_icon if msg["role"] == "user" else guru_icon
-        
-        # Format content: Convert **bold** to <strong> and newlines to <br>
         display_content = msg["content"].replace('\n', '<br>')
         display_content = re.sub(r'\*\*(.*?)\*\*', r'<strong>\1</strong>', display_content)
         
