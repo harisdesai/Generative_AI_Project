@@ -16,28 +16,21 @@ def login():
     logo_left, logo_mid, logo_right = st.columns([1.43, 1, 1])
     
     with logo_mid:
-        # 2. Use 'width' instead of 'use_column_width'
-        # Adjust '200' to '150' if you want it even smaller
         st.markdown('<div class="logo-container">', unsafe_allow_html=True)
         st.image("https://sunbeaminfo.in/img/new/new_logo.png", width=200)
         st.markdown('</div>', unsafe_allow_html=True)
     
     # 1. Centered Header
     st.markdown("<h1 class='neon-glow' style='text-align: center;'>SYSTEM ACCESS</h1>", unsafe_allow_html=True)
-    
-    # 2. Create 3 columns: side columns act as spacers to "squeeze" the middle one
-    # Ratio [1, 1.2, 1] makes the center box about 40% of the screen width
     left_spacer, center_col, right_spacer = st.columns([1, 1.2, 1])
     
     with center_col:
-        # Wrapping in a container for better alignment
         with st.container():
             with st.form("login_form"):
                 user = st.text_input("Username")
                 pw = st.text_input("Password", type="password")
                 role = st.selectbox("Role", ["User", "Admin"])
                 
-                # Aligning the button to look better in a small window
                 submit = st.form_submit_button("UNLEASH AI", use_container_width=True)
                 
                 if submit:
@@ -51,10 +44,8 @@ def login():
                         st.error("Invalid Credentials")
 
 if not st.session_state.logged_in:
-    # If not logged in, show the login form
     login() 
 else:
-    # If logged in, show the appropriate UI based on role
     if st.session_state.role == "Admin":
         render_admin_ui(style_func) 
     else:
