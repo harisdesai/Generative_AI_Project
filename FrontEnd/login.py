@@ -41,7 +41,7 @@ def login():
                         st.session_state.logged_in, st.session_state.role = True, "User"
                         st.rerun()
                     else:
-                        st.error("Invalid Credentials") 
+                        st.error("Invalid Credentials")
 
 if not st.session_state.logged_in:
     login() 
