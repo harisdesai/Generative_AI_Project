@@ -23,7 +23,7 @@ pandasql
 # Web & APIs
 requests
 
-# PDF / Document handling.
+# PDF / Document handling
 pypdf
 
 # Web Automation (used in assignments)
